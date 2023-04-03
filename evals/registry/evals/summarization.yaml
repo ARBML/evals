@@ -9,6 +9,6 @@ summarization.test.v1:
   # Specify the arguments as a dictionary of JSONL URIs
   # These arguments can be anything that you want to pass to the class constructor
   args:
-    "samples_jsonl": summarization/samples.jsonl
-    "few_shot_jsonl": summarization/few_shot.jsonl
-    "num_few_shot": 0
+    samples_jsonl: summarization/samples.jsonl
+    few_shot_jsonl: summarization/few_shot.jsonl
+    num_few_shot: 0
