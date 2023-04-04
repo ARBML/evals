@@ -1,0 +1,14 @@
+summarization:
+  id: summarization.test.v1
+  metrics: [average_rouge1,average_rougeL]
+  description: Evaluate Arabic text summarization
+# Define the eval
+summarization.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.summarization:Summarization
+  # Specify the arguments as a dictionary of JSONL URIs
+  # These arguments can be anything that you want to pass to the class constructor
+  args:
+    samples_jsonl: summarization/samples.jsonl
+    few_shot_jsonl: summarization/few_shot.jsonl
+    num_few_shot: 0

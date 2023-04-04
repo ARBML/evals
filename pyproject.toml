@@ -24,6 +24,9 @@ dependencies = [
     "pyyaml",
     "sacrebleu",
     "matplotlib",
+    "datasets",
+    "openpyxl",
+    "rouge_score_ar @ git+https://github.com/ARBML/rouge_score_ar.git"
 ]
 
 [project.scripts]
