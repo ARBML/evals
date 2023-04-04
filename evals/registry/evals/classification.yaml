@@ -1,0 +1,12 @@
+classification:
+  id: classification.test.v1
+  metrics: [accuracy]
+  description: Evaluate Arabic text classification
+# Define the eval
+classification.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.classification:Classification
+  args:
+    samples_jsonl: classification/samples.jsonl
+    few_shot_jsonl: classification/few_shot.jsonl # path to few shots file
+    num_few_shot: 5 # max few shots to use
