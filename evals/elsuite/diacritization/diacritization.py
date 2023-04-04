@@ -52,7 +52,12 @@ class Diacritization(evals.Eval):
         )
 
         if expected is not None:
-            der, wer = calculate_diacritization_score(
+            (
+                der,
+                wer,
+                der_with_case_ending,
+                wer_with_case_ending,
+            ) = calculate_diacritization_score(
                 predicted=sampled,
                 expected=expected,
             )
@@ -63,6 +68,8 @@ class Diacritization(evals.Eval):
                     wer=wer,
                     sampled=sampled,
                     expected=expected,
+                    der_with_case_ending=der_with_case_ending,
+                    wer_with_case_ending=wer_with_case_ending,
                 ),
             )
 
@@ -76,13 +83,23 @@ class Diacritization(evals.Eval):
 
         ders = list(map(lambda e: e.data["der"], events))
         wers = list(map(lambda e: e.data["wer"], events))
+        ders_with_case_ending = list(
+            map(lambda e: e.data["der_with_case_ending"], events)
+        )
+        wers_with_case_ending = list(
+            map(lambda e: e.data["wer_with_case_ending"], events)
+        )
 
         get_average = lambda items: sum(items) / len(items)
 
         average_ders = get_average(ders)
         average_wers = get_average(wers)
+        average_ders_with_case_ending = get_average(ders_with_case_ending)
+        average_wers_with_case_ending = get_average(wers_with_case_ending)
 
         return {
             "average_ders": average_ders,
             "average_wers": average_wers,
+            "average_ders_with_case_ending": average_ders_with_case_ending,
+            "average_wers_with_case_ending": average_wers_with_case_ending,
         }

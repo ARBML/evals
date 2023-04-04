@@ -24,6 +24,7 @@ dependencies = [
     "pyyaml",
     "sacrebleu",
     "matplotlib",
+    "diacritization-evaluation @ git+https://github.com/almodhfer/diacritization_evaluation.git@c46d234e39e6c8133a8c4377dc1fdd55d05639cc", # pin to a specific commit
 ]
 
 [project.scripts]
