@@ -55,8 +55,8 @@ class Diacritization(evals.Eval):
             (
                 der,
                 wer,
-                der_with_case_ending,
-                wer_with_case_ending,
+                der_no_ce,
+                wer_no_ce,
             ) = calculate_diacritization_score(
                 predicted=sampled,
                 expected=expected,
@@ -64,12 +64,12 @@ class Diacritization(evals.Eval):
             evals.record.default_recorder().record_event(
                 type="diacritization",
                 data=dict(
-                    der=der,
-                    wer=wer,
                     sampled=sampled,
                     expected=expected,
-                    der_with_case_ending=der_with_case_ending,
-                    wer_with_case_ending=wer_with_case_ending,
+                    der=der,
+                    wer=wer,
+                    der_no_ce=der_no_ce,
+                    wer_no_ce=wer_no_ce,
                 ),
             )
 
@@ -83,23 +83,23 @@ class Diacritization(evals.Eval):
 
         ders = list(map(lambda e: e.data["der"], events))
         wers = list(map(lambda e: e.data["wer"], events))
-        ders_with_case_ending = list(
-            map(lambda e: e.data["der_with_case_ending"], events)
+        ders_no_ce = list(
+            map(lambda e: e.data["der_no_ce"], events)
         )
-        wers_with_case_ending = list(
-            map(lambda e: e.data["wer_with_case_ending"], events)
+        wers_no_ce = list(
+            map(lambda e: e.data["wer_no_ce"], events)
         )
 
         get_average = lambda items: sum(items) / len(items)
 
         average_ders = get_average(ders)
         average_wers = get_average(wers)
-        average_ders_with_case_ending = get_average(ders_with_case_ending)
-        average_wers_with_case_ending = get_average(wers_with_case_ending)
+        average_ders_no_ce = get_average(ders_no_ce)
+        average_wers_no_ce = get_average(wers_no_ce)
 
         return {
-            "average_ders": average_ders,
-            "average_wers": average_wers,
-            "average_ders_with_case_ending": average_ders_with_case_ending,
-            "average_wers_with_case_ending": average_wers_with_case_ending,
+            "der": average_ders,
+            "wer": average_wers,
+            "der*": average_ders_no_ce,
+            "wer*": average_wers_no_ce,
         }

@@ -1,0 +1,20 @@
+# Define a base eval
+tashkeela:
+  # id specifies the eval that this eval is an alias for
+  # in this case, diacritization is an alias for arithmetic.dev.match-v1
+  # When you run `oaieval davinci diacritization`, you are actually running `oaieval davinci diacritization.dev.v1`
+  id: tashkeela.dev.v1
+  # The metrics that this eval records
+  # The first metric will be considered to be the primary metric
+  metrics: [average_ders,average_wers]
+  description: Evaluate Arabic text diacritization
+# Define the eval
+tashkeela.dev.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.diacritization:Diacritization
+  # Specify the arguments as a dictionary of JSONL URIs
+  # These arguments can be anything that you want to pass to the class constructor
+  args:
+    samples_jsonl: tashkeela/samples.jsonl
+    few_shot_jsonl: tashkeela/fewshots.jsonl # path to few shots file
+    num_few_shot: 0 # max few shots to use

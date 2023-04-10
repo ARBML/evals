@@ -1,24 +1,39 @@
 from diacritization_evaluation import wer, der
+import re
+
+def post_process(txt):
+  puncts = '؟،-[]:؛;()$#@&+=_-{}"\'.\n/\\0123456789١٢٣٤٥٦٧٨٩٠١'
+  out = ""
+  for c in txt:
+    if c in puncts:
+      out += ' '
+      continue
+    out += c
+  return re.sub(' +', ' ', out).strip()
 
 
 def calculate_diacritization_score(predicted, expected):
-    der_score = der.calculate_der(
+    # remove punctuations and special characters
+    predicted = post_process(predicted)
+
+    der_ = der.calculate_der(
         expected,
         predicted,
+        case_ending=True
     )
-    wer_score = wer.calculate_wer(
+    wer_ = wer.calculate_wer(
+        expected,
+        predicted,
+        case_ending=True,
+    )
+    der_no_ce = der.calculate_der(
         expected,
         predicted,
         case_ending=False,
     )
-    der_score_with_case_ending = der.calculate_der(
+    wer_no_ce = wer.calculate_wer(
         expected,
         predicted,
-        case_ending=True,
+        case_ending=False,
     )
-    wer_score_with_case_ending = wer.calculate_wer(
-        expected,
-        predicted,
-        case_ending=True,
-    )
-    return der_score, wer_score, der_score_with_case_ending, wer_score_with_case_ending
+    return der_, wer_, der_no_ce, wer_no_ce
