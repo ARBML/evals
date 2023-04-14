@@ -27,6 +27,7 @@ dependencies = [
     "diacritization-evaluation @ git+https://github.com/almodhfer/diacritization_evaluation.git@c46d234e39e6c8133a8c4377dc1fdd55d05639cc", # pin to a specific commit
     "datasets",
     "openpyxl",
+    "pyarabic",
     "rouge_score_ar @ git+https://github.com/ARBML/rouge_score_ar.git"
 ]
 

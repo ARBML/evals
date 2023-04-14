@@ -17,4 +17,4 @@ diacratization.dev.v1:
   args:
     samples_jsonl: tashkeela_sum/samples.jsonl
     few_shot_jsonl: tashkeela_sum/fewshots.jsonl # path to few shots file
-    num_few_shot: 2 # max few shots to use
+    num_few_shot: 0 # number of few shots to use

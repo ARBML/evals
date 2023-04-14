@@ -5,10 +5,10 @@ from typing import Any
 import evals
 import evals.metrics
 from evals.prompt.base import is_chat_prompt
-from evals.elsuite.diacritization.utils import calculate_diacritization_score
+from evals.elsuite.diacratization.utils import calculate_diacritization_score
 
 
-class Diacritization(evals.Eval):
+class Diacratization(evals.Eval):
     def __init__(
         self,
         samples_jsonl: str,
@@ -37,7 +37,13 @@ class Diacritization(evals.Eval):
         if self.num_few_shot > 0:
             assert is_chat_prompt(sample["input"]), "few shot requires chat prompt"
             prompt = sample["input"][:-1]
-            for s in self.few_shot[: self.num_few_shot]:
+            random_few_shots = random.sample(
+                self.few_shot,
+                self.num_few_shot
+                if self.num_few_shot < len(self.few_shot)
+                else len(self.few_shot),
+            )
+            for s in random_few_shots:
                 prompt += s["sample"]
             prompt += sample["input"][-1:]
 
@@ -83,12 +89,8 @@ class Diacritization(evals.Eval):
 
         ders = list(map(lambda e: e.data["der"], events))
         wers = list(map(lambda e: e.data["wer"], events))
-        ders_no_ce = list(
-            map(lambda e: e.data["der_no_ce"], events)
-        )
-        wers_no_ce = list(
-            map(lambda e: e.data["wer_no_ce"], events)
-        )
+        ders_no_ce = list(map(lambda e: e.data["der_no_ce"], events))
+        wers_no_ce = list(map(lambda e: e.data["wer_no_ce"], events))
 
         get_average = lambda items: sum(items) / len(items)
 
