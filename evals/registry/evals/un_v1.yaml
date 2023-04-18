@@ -1,0 +1,11 @@
+# Define a base eval
+translation:
+  id: translation.dev.v1
+  metrics: ["accuracy"]
+  description: Evaluate on translation
+translation.dev.v1:
+  class: evals.elsuite.translate:Translate
+  args:
+    samples_jsonl: un_v1/samples_ar_en.jsonl
+    few_shot_jsonl: un_v1/few_shot_ar_en.jsonl # path to few shots file
+    num_few_shot: 0 # max few shots to use
