@@ -1,0 +1,10 @@
+# Define a base eval
+paraphrasing:
+  id: paraphrasing.dev.v1
+  metrics: ["accuracy"]
+  description: Evaluate on paraphrasing
+paraphrasing.dev.v1:
+  class: evals.elsuite.translate:Translate
+  args:
+    samples_jsonl: apb/samples.jsonl
+    num_few_shot: 0 # max few shots to use
