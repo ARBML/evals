@@ -1,0 +1,1 @@
+from .pos_tagging import POSTagger

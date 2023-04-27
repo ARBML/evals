@@ -1,6 +1,7 @@
 import random
 import textwrap
 from typing import Any
+from itertools import zip_longest
 
 import evals
 import evals.metrics
@@ -14,6 +15,9 @@ def pos_tagging_accuracy(predicted_tags, true_tags):
 
     # Check that the number of tokens is the same in both lists
     if len(predicted_tags) != len(true_tags):
+        from pprint import pprint
+        pprint(predicted_tags)
+        pprint(true_tags)
         raise ValueError("Number of predicted tags and true tags does not match.")
 
     # Initialize the count of correct tags
@@ -21,8 +25,8 @@ def pos_tagging_accuracy(predicted_tags, true_tags):
 
     # Loop through the tokens and compare the predicted and true tags
     for i in range(len(predicted_tags)):
-        predicted_tag = predicted_tags[i].split("|")[1].strip()
-        true_tag = true_tags[i].split("|")[1].strip()
+        predicted_tag = predicted_tags[i].split(":")[1].strip()
+        true_tag = true_tags[i].split(":")[1].strip()
         if predicted_tag == true_tag:
             correct_count += 1
 
@@ -36,7 +40,7 @@ class POSTagger(evals.Eval):
         self,
         samples_jsonl: str,
         *args,
-        max_tokens: int = 1024,
+        max_tokens: int = 1400,
         num_few_shot: int = 0,
         few_shot_jsonl: str = None,
         **kwargs,
@@ -60,31 +64,34 @@ class POSTagger(evals.Eval):
         if self.num_few_shot > 0:
             assert is_chat_prompt(sample["input"]), "few shot requires chat prompt"
             prompt = sample["input"][:-1]
-            prompt += """
-            here are some examples to consider:
-            """
+
             random_fewshots = random.sample(
                 self.few_shot,
                 self.num_few_shot
                 if self.num_few_shot < len(self.few_shot)
                 else len(self.few_shot),
             )
+            
             for s in random_fewshots:
                 prompt += s["sample"]
-            prompt += """
-            My sentence is:
-            """
+
             prompt += sample["input"][-1:]
+            # print(prompt)
 
         assert isinstance(
             expected, str
         ), "ideal entry in jsonl (i.e. expected) should be string"
+
+        print(prompt)
 
         sampled = evals.sample_freeform(
             self.model_spec,
             prompt,
             max_tokens=self.max_tokens,
         )
+
+        print('prompt is:',prompt)
+        print('sampled is:',sampled)
 
         if expected is not None:
             accuracy = pos_tagging_accuracy(predicted_tags=sampled, true_tags=expected)
