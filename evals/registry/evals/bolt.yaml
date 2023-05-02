@@ -1,0 +1,9 @@
+# Define a base eval
+transliteration:
+  id: transliteration.dev.v1
+  metrics: ["accuracy"]
+  description: Evaluate on transliteration
+transliteration.dev.v1:
+  class: evals.elsuite.translate:Translate
+  args:
+    samples_jsonl: bolt/samples.jsonl
