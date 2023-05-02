@@ -1,11 +1,33 @@
+import re
 import random
-import textwrap
 from typing import Any
-from itertools import zip_longest
+import difflib
 
 import evals
 import evals.metrics
 from evals.prompt.base import is_chat_prompt
+
+
+def match_tag_sequences(predicted_tags, true_tags):
+    def clean_tag_lines(lines):
+        cleaned_lines = []
+        for line in lines:
+            # Remove quotes at the beginning or end of the lines
+            line = re.sub(r'^"|"$', "", line)
+
+            # Remove any character that is not Arabic or punctuation
+            line = re.sub(r"[^\u0600-\u06FF\s\.\?!،؛]", "", line)
+
+            # Print the cleaned line
+            cleaned_lines.append(line)
+        return cleaned_lines
+
+    matcher = difflib.Differ()
+    match_sequence = matcher.compare(
+        clean_tag_lines(true_tags),
+        clean_tag_lines(predicted_tags),
+    )
+    return list(match_sequence)
 
 
 def pos_tagging_accuracy(predicted_tags, true_tags):
@@ -13,25 +35,44 @@ def pos_tagging_accuracy(predicted_tags, true_tags):
     predicted_tags = predicted_tags.strip().split("\n")
     true_tags = true_tags.strip().split("\n")
 
-    # Check that the number of tokens is the same in both lists
-    if len(predicted_tags) != len(true_tags):
-        from pprint import pprint
-        pprint(predicted_tags)
-        pprint(true_tags)
-        raise ValueError("Number of predicted tags and true tags does not match.")
+    match_sequence = match_tag_sequences(
+        predicted_tags=predicted_tags,
+        true_tags=true_tags,
+    )
+
+    # print(len(match_sequence))
+    # print(len(true_tags))
+    # print(len(predicted_tags))
 
     # Initialize the count of correct tags
     correct_count = 0
-
-    # Loop through the tokens and compare the predicted and true tags
-    for i in range(len(predicted_tags)):
-        predicted_tag = predicted_tags[i].split(":")[1].strip()
-        true_tag = true_tags[i].split(":")[1].strip()
+    matched_index = 0
+    for line in match_sequence:
+        # if the current line only presents in the predicted sequence, just continue without any penalization.
+        if line.startswith("+"):
+            # remove that element from the predicted tags to have equal length lists
+            predicted_tags.pop(matched_index)
+            continue
+        if line.startswith("?"):
+            continue
+        # if the current line is present in the true sequence but not in the predicted sequence, penalize (matched_index incremented and correct_count was not) and continue
+        if line.startswith("-"):
+            predicted_tags.insert(matched_index, "X")
+            matched_index += 1
+            continue
+        # print(line)
+        # print(predicted_tags[matched_index])
+        # print(true_tags[matched_index])
+        # print(f"{matched_index:=}")
+        # print("*" * 100)
+        predicted_tag = predicted_tags[matched_index].split(":")[1].strip()
+        true_tag = true_tags[matched_index].split(":")[1].strip()
         if predicted_tag == true_tag:
             correct_count += 1
+        matched_index += 1
 
     # Calculate the accuracy and return it
-    accuracy = correct_count / len(predicted_tags)
+    accuracy = correct_count / len(true_tags)
     return accuracy
 
 
@@ -71,7 +112,7 @@ class POSTagger(evals.Eval):
                 if self.num_few_shot < len(self.few_shot)
                 else len(self.few_shot),
             )
-            
+
             for s in random_fewshots:
                 prompt += s["sample"]
 
@@ -82,16 +123,11 @@ class POSTagger(evals.Eval):
             expected, str
         ), "ideal entry in jsonl (i.e. expected) should be string"
 
-        print(prompt)
-
         sampled = evals.sample_freeform(
             self.model_spec,
             prompt,
             max_tokens=self.max_tokens,
         )
-
-        print('prompt is:',prompt)
-        print('sampled is:',sampled)
 
         if expected is not None:
             accuracy = pos_tagging_accuracy(predicted_tags=sampled, true_tags=expected)
