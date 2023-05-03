@@ -1,0 +1,12 @@
+pos_tagging:
+    id: pos_tagging.test.v1
+    metrics: [accuracy]
+    description: Evaluate Arabic POS tagging
+# Define the eval
+pos_tagging.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.pos_tagging:POSTagger
+  args:
+    samples_jsonl: pos_tagging/pos_tagging_samples.jsonl
+    few_shot_jsonl: pos_tagging/pos_tagging_fewshots.jsonl # path to few shots file
+    num_few_shot: 3 # max few shots to use

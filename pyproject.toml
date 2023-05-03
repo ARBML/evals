@@ -28,7 +28,8 @@ dependencies = [
     "datasets",
     "openpyxl",
     "pyarabic",
-    "rouge_score_ar @ git+https://github.com/ARBML/rouge_score_ar.git"
+    "rouge_score_ar @ git+https://github.com/ARBML/rouge_score_ar.git",
+    "conllu"
 ]
 
 [project.scripts]
