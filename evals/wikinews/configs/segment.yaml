@@ -1,0 +1,46 @@
+run-title: wikinews-sports
+
+paths:
+  base: /Users/bkhmsi/Desktop/WikiNews/segments
+  constants: /Users/bkhmsi/Projects/evals/evals/datasets/ar-constants
+
+segment:
+  stride: 2
+  window: 20
+  min-window: 2
+  export-map: true
+  files:
+    - WikiNews.fsports.grnd
+
+predictor:
+  batch-size: 75
+  stride: 2
+  window: 20
+  gt-signal-prob: 0
+  seed-idx: 0
+
+sentence-break:
+  stride: 2
+  window: 20
+  min-window: 2
+  delimeters: 
+    - ،
+    - ؛
+    - ','
+    - ;
+    - «
+    - »
+    - '{'
+    - '}'
+    - '('
+    - ')'
+    - '['
+    - ']'
+    - '.'
+    - '*'
+    - '-'
+    - ':'
+    - '?'
+    - '!'
+    - ؟
+    - '"'
