@@ -50,7 +50,7 @@ class Classification(evals.Eval):
         )
 
         if expected is not None:
-            accuracy= expected in sampled.lower()
+            accuracy= expected.lower() in sampled.lower()
 
             evals.record.default_recorder().record_event(
                 type="classification",
