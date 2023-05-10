@@ -1,0 +1,12 @@
+ajgt:
+  id: ajgt.test.v1
+  metrics: [accuracy]
+  description: Evaluate Arabic text classification
+# Define the eval
+ajgt.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.classification:Classification
+  args:
+    samples_jsonl: ajgt/samples.jsonl
+    few_shot_jsonl: ajgt/few_shot.jsonl # path to few shots file
+    num_few_shot: 0 # max few shots to use
