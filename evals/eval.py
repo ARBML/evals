@@ -26,7 +26,7 @@ _MAX_SAMPLES = None
 def _index_samples(samples: List[Any]) -> List[Tuple[Any, int]]:
     """Shuffle `samples` and pair each sample with its index."""
     indices = list(range(len(samples)))
-    random.Random(SHUFFLE_SEED).shuffle(indices)
+    # random.Random(SHUFFLE_SEED).shuffle(indices)
     if _MAX_SAMPLES is not None:
         indices = indices[:_MAX_SAMPLES]
     logger.info(f"Evaluating {len(indices)} samples")
