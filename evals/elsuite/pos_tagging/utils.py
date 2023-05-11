@@ -59,10 +59,25 @@ def pos_tagging_accuracy(predicted_tags, true_tags):
         # print(true_tags[matched_index])
         # print(f"{matched_index:=}")
         # print("*" * 100)
-        predicted_tag = predicted_tags[matched_index].split(":")[1].strip()
-        true_tag = true_tags[matched_index].split(":")[1].strip()
-        if predicted_tag == true_tag:
-            correct_count += 1
+        # try:
+        #     predicted_tag = predicted_tags[matched_index].split(":")[1].strip()
+        # except Exception as e:
+        #     print('predicted tags are:')
+        #     print(predicted_tags)
+        #     print('true tags are:')
+        #     print(true_tags)
+        #     print("Error occured at line:")
+        #     print(line)
+        #     print('Match Sequence:')
+        #     print(match_sequence)
+        #     raise e
+        
+        predicted_tags_tokens = predicted_tags[matched_index].split(":")
+        if len(predicted_tags_tokens) == 2: # usually, at the end of the sentence, chatGPT forget to tag the PUNCTUATIONs. 
+            predicted_tag = predicted_tags_tokens[1].strip()
+            true_tag = true_tags[matched_index].split(":")[1].strip()
+            if predicted_tag.upper() == true_tag.upper():
+                correct_count += 1
         matched_index += 1
 
     # Calculate the accuracy and return it
