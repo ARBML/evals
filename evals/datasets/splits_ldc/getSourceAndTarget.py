@@ -8,6 +8,7 @@ import sys
 import re
 import unicodedata as ud
 
+
 def fixPunctuation(line):
     punctuationDict = {"؛": ";", "؟": "?", "،": ","}
     newLine = []
@@ -22,15 +23,18 @@ def fixPunctuation(line):
         newLine.append(newWord)
     return newLine
 
+
 def removeNones(arr):
     return list(filter(lambda x: x.text != None, arr))
+
 
 def checkForForeignChar(word):
     for char in word:
         if ord(char) > 127:
             return True
-    
+
     return False
+
 
 def wordMadeOfSameChar(word):
     firstChar = word[0]
@@ -39,11 +43,13 @@ def wordMadeOfSameChar(word):
             return False
     return True
 
+
 def onlyHashtags(word):
     for char in word:
         if char != "#":
             return False
     return True
+
 
 def countForeignChars(word):
     count = 0
@@ -57,12 +63,12 @@ def countForeignChars(word):
 def fixHash(goldWord, annotatedArabiziWord):
     if len(goldWord) == len(annotatedArabiziWord) or goldWord == "#":
         return annotatedArabiziWord
-    
+
     if onlyHashtags(goldWord):
         return annotatedArabiziWord
 
     if goldWord.count("#") == 1:
-        
+
         if len(annotatedArabiziWord) == 1:
             return goldWord.replace("#", annotatedArabiziWord)
 
@@ -76,17 +82,21 @@ def fixHash(goldWord, annotatedArabiziWord):
         # Handling (y) separately
         if annotatedArabiziWord.find("(y)") != -1:
             return goldWord.replace("#", "(y)")
-    
-    # Other emojis
-        match = re.search(r'[=:;8xX>^()$*@-][-_.\'"]*[XxOoPpsSDVvFfEe&)(\][/\\Cc3><}{@|:;=0*L$^~-]+', annotatedArabiziWord, re.IGNORECASE) 
+
+        # Other emojis
+        match = re.search(
+            r'[=:;8xX>^()$*@-][-_.\'"]*[XxOoPpsSDVvFfEe&)(\][/\\Cc3><}{@|:;=0*L$^~-]+',
+            annotatedArabiziWord,
+            re.IGNORECASE,
+        )
         # Text Emojis
         if match:
             return goldWord.replace("#", match.group(0))
         else:
-        # Handle graphic emojies
+            # Handle graphic emojies
             if checkForForeignChar(annotatedArabiziWord) and goldWord[-1]:
                 replacement = ""
-                for i in range(len(annotatedArabiziWord)-1, -1, -1):
+                for i in range(len(annotatedArabiziWord) - 1, -1, -1):
                     if ord(annotatedArabiziWord[i]) < 128:
                         break
                     replacement += annotatedArabiziWord[i]
@@ -99,12 +109,15 @@ def fixHash(goldWord, annotatedArabiziWord):
                         break
                     replacement += annotatedArabiziWord[i]
                 return goldWord.replace("#", replacement)
-            
-        # Handling characters such as @$* etc at start or end of word
+
+            # Handling characters such as @$* etc at start or end of word
             elif goldWord[-1] == "#":
                 replacement = ""
-                for i in range(len(annotatedArabiziWord)-1, -1, -1):
-                    if annotatedArabiziWord[i] not in "~!@#$%^&*()-_=+\\|]}[{\":;?/>.<,'":
+                for i in range(len(annotatedArabiziWord) - 1, -1, -1):
+                    if (
+                        annotatedArabiziWord[i]
+                        not in "~!@#$%^&*()-_=+\\|]}[{\":;?/>.<,'"
+                    ):
                         break
                     replacement += annotatedArabiziWord[i]
                 return goldWord.replace("#", replacement)
@@ -112,7 +125,10 @@ def fixHash(goldWord, annotatedArabiziWord):
             elif goldWord[0] == "#":
                 replacement = ""
                 for i in range(len(annotatedArabiziWord)):
-                    if annotatedArabiziWord[i] not in "~!@#$%^&*()-_=+\\|]}[{\":;?/>.<,'":
+                    if (
+                        annotatedArabiziWord[i]
+                        not in "~!@#$%^&*()-_=+\\|]}[{\":;?/>.<,'"
+                    ):
                         break
                     replacement += annotatedArabiziWord[i]
                 return goldWord.replace("#", replacement)
@@ -120,23 +136,27 @@ def fixHash(goldWord, annotatedArabiziWord):
             else:
                 indexOfHash = goldWord.index("#")
                 return goldWord.replace("#", annotatedArabiziWord[indexOfHash])
-            
+
     # In case of brackets
-    elif goldWord.count("#") == 2 and annotatedArabiziWord.count("(") == 1 and annotatedArabiziWord.count(")") == 1:
+    elif (
+        goldWord.count("#") == 2
+        and annotatedArabiziWord.count("(") == 1
+        and annotatedArabiziWord.count(")") == 1
+    ):
         goldWord = goldWord.replace("#", "(", 1)
         goldWord = goldWord.replace("#", ")")
         return goldWord
-        
+
     else:
         if wordMadeOfSameChar(annotatedArabiziWord):
             return goldWord.replace("#", annotatedArabiziWord[0])
-        
+
         elif len(annotatedArabiziWord) == 1:
             return annotatedArabiziWord
-        
+
         elif goldWord.count("#") == annotatedArabiziWord.count("<3"):
             return goldWord.replace("#", "<3")
-        
+
         elif goldWord.count("#") == countForeignChars(annotatedArabiziWord):
             for char in annotatedArabiziWord:
                 if ord(char) > 127:
@@ -145,14 +165,21 @@ def fixHash(goldWord, annotatedArabiziWord):
 
         else:
             for i in range(goldWord.count("#")):
-                match = re.search(r'[=:;8xX>^()$*<@-][-_.\'"]*[XxOoPpsSDVvFfEe&)(\][/\\Cc3><}{@0*L$^~|3]', annotatedArabiziWord, re.IGNORECASE) 
+                match = re.search(
+                    r'[=:;8xX>^()$*<@-][-_.\'"]*[XxOoPpsSDVvFfEe&)(\][/\\Cc3><}{@0*L$^~|3]',
+                    annotatedArabiziWord,
+                    re.IGNORECASE,
+                )
                 if match:
                     goldWord = goldWord.replace("#", match.group(0), 1)
-                    annotatedArabiziWord = annotatedArabiziWord.replace(match.group(0), "", 1)
+                    annotatedArabiziWord = annotatedArabiziWord.replace(
+                        match.group(0), "", 1
+                    )
                 elif len(annotatedArabiziWord) == 1:
                     goldWord = goldWord.replace("#", annotatedArabiziWord)
 
             return goldWord
+
 
 def isWholeWordForeign(word):
     for char in word:
@@ -160,69 +187,92 @@ def isWholeWordForeign(word):
             return False
     return True
 
+
 def removeSeparationTokens(line, file):
     line = line.replace("[+] ", "")
     line = line.replace("[-]", " ")
     line = line.replace("[+]", "")
     return line
 
-arabiziOutput = open("arabizioutput.txt", "w") # This will be the input for seq2seq
-intermediateOutput = open("outputintermediate.txt", "w") # We'll use this as our seq2seq model gold
-finalOutput = open("output.txt", "w") # This is the final target without any [-] and [+]
 
+dirs = os.listdir(sys.argv[1])
+dirs.sort()
 
-tree = ET.parse("LDC2021T17.su.xml")
-root = tree.getroot()
+arabiziOutput = open(sys.argv[2], "w")  # This will be the input for seq2seq
+intermediateOutput = open(sys.argv[3], "w")  # We'll use this as our seq2seq model gold
+finalOutput = open(sys.argv[4], "w")  # This is the final target without any [-] and [+]
 
-tracker = 0
-allWords = root.findall("./su/annotated_arabizi/token")
-allRawGold = removeNones(root.findall("./su/corrected_transliteration"))
-totalLinesInFile = len(allRawGold)
-lineCounter = 0
-
-for source in root.findall("./su/source"):
-    if lineCounter >= totalLinesInFile:
-        continue
-        
-    numLines = 0
-    if source.text == None:
+for i in dirs:
+    if i[-3:] != "xml":
         continue
 
-    currLineSourceWords = source.text.strip().split()
-    arabiziOutput.write(source.text.strip() + "\n")
+    tree = ET.parse(sys.argv[1] + i)
+    root = tree.getroot()
 
-    currGoldLine = allRawGold[lineCounter].text.strip().split()
-    currGoldLine = fixPunctuation(currGoldLine)
+    tracker = 0
+    allWords = root.findall("./su/annotated_arabizi/token")
+    allRawGold = removeNones(root.findall("./su/corrected_transliteration"))
+    totalLinesInFile = len(allRawGold)
+    lineCounter = 0
+    for source in root.findall("./su/source"):
+        if lineCounter >= totalLinesInFile:
+            continue
 
-    numLines = len(source.text.split())
+        numLines = 0
+        if source.text == None:
+            continue
 
-    if tracker >= len(allWords):
-        continue
+        currLineSourceWords = source.text.strip().split()
+        arabiziOutput.write(source.text.strip() + "\n")
 
-    wordsOfThisLineCounter = 0
-    for j in range(tracker, tracker + numLines):
+        currGoldLine = allRawGold[lineCounter].text.strip().split()
+        currGoldLine = fixPunctuation(currGoldLine)
 
-        if "[+]" in currGoldLine[wordsOfThisLineCounter][-3:] and j + 1 < tracker + numLines and "tag" in allWords[j+1].attrib and allWords[j+1].attrib["tag"] == "foreign":
-            currGoldLine[wordsOfThisLineCounter] = currGoldLine[wordsOfThisLineCounter][:-3]
+        numLines = len(source.text.split())
 
-        if ("tag" in allWords[j].attrib and allWords[j].attrib["tag"] in ["punctuation", "foreign"]) or isWholeWordForeign(allWords[j].text):
-            currGoldLine[wordsOfThisLineCounter] = currLineSourceWords[wordsOfThisLineCounter]
+        if tracker >= len(allWords):
+            continue
 
-        if "#" in currGoldLine[wordsOfThisLineCounter]:
-            currGoldLine[wordsOfThisLineCounter] = fixHash(currGoldLine[wordsOfThisLineCounter], allWords[j].text)
-        wordsOfThisLineCounter += 1
-    
-    goldLineWithSeparationTokens = " ".join(currGoldLine)
-    intermediateOutput.write(goldLineWithSeparationTokens + "\n")
+        wordsOfThisLineCounter = 0
+        for j in range(tracker, tracker + numLines):
 
-    if len(source.text.strip().split()) != len(currGoldLine):
-        pass
-        
-    goldLineWithoutSeparationTokens = removeSeparationTokens(goldLineWithSeparationTokens, 0)
-    finalOutput.write(goldLineWithoutSeparationTokens + "\n")
-    tracker += numLines
-    lineCounter += 1
-    
+            if (
+                "[+]" in currGoldLine[wordsOfThisLineCounter][-3:]
+                and j + 1 < tracker + numLines
+                and "tag" in allWords[j + 1].attrib
+                and allWords[j + 1].attrib["tag"] == "foreign"
+            ):
+                currGoldLine[wordsOfThisLineCounter] = currGoldLine[
+                    wordsOfThisLineCounter
+                ][:-3]
+
+            if (
+                "tag" in allWords[j].attrib
+                and allWords[j].attrib["tag"] in ["punctuation", "foreign"]
+            ) or isWholeWordForeign(allWords[j].text):
+                currGoldLine[wordsOfThisLineCounter] = currLineSourceWords[
+                    wordsOfThisLineCounter
+                ]
+
+            if "#" in currGoldLine[wordsOfThisLineCounter]:
+                currGoldLine[wordsOfThisLineCounter] = fixHash(
+                    currGoldLine[wordsOfThisLineCounter], allWords[j].text
+                )
+            wordsOfThisLineCounter += 1
+
+        goldLineWithSeparationTokens = " ".join(currGoldLine)
+        intermediateOutput.write(goldLineWithSeparationTokens + "\n")
+
+        if len(source.text.strip().split()) != len(currGoldLine):
+            pass
+
+        goldLineWithoutSeparationTokens = removeSeparationTokens(
+            goldLineWithSeparationTokens, i
+        )
+        finalOutput.write(goldLineWithoutSeparationTokens + "\n")
+        tracker += numLines
+        lineCounter += 1
+
 arabiziOutput.close()
 intermediateOutput.close()
 finalOutput.close()
