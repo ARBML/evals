@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 import numpy as np
 import pickle as pkl
@@ -14,16 +15,15 @@ diacritics = {
     "SUKUN": 4
 }
 
-DOMAIN = "sports"
+DOMAIN = "art"
 
 def load_pickle(path):
     with open(path, 'rb') as file:
         data = pkl.load(file)
     return data
 
-def load_file_clean(base_path, domain, strip=False):
-    f_name = os.path.join(base_path, f"WikiNews.ff{domain}.grnd")
-    with open(f_name, 'r', encoding="utf-8") as fin:
+def load_file_clean(path, strip=False):
+    with open(path, 'r', encoding="utf-8") as fin:
         original_lines = [strip_tashkeel(preprocess(line)) if strip else preprocess(line) for line in fin.readlines()]
     return original_lines
 
@@ -32,7 +32,7 @@ def preprocess(line):
 
 class DataAggregator:
     def __init__(self, config):
-        self.base_path = config["paths"]["base"]
+        self.base_path = config["paths"]["combine"].format(DOMAIN)
         self.special_tokens = ['<pad>', '<unk>', '<num>', '<punc>'] 
         self.delimeters = config["sentence-break"]["delimeters"]
         self.load_constants(config["paths"]["constants"])
@@ -47,8 +47,8 @@ class DataAggregator:
 
     def load_mapping(self, domain):
         mapping = {}
-        file_ext = f"{self.stride}-{self.window}.filter.map"
-        f_name = os.path.join(self.base_path, f"WikiNews.f{domain}.{file_ext}")
+        file_ext = f"{self.stride}-{self.window}.map"
+        f_name = os.path.join(self.base_path, f"WikiNews.{domain}.{file_ext}")
         with open(f_name, 'r') as fin:
             for line in fin:
                 sent_idx, seg_idx, t_idx, c_idx = map(int, line.split(','))
@@ -173,18 +173,24 @@ def shakkel_char(diac: int, tanween: bool, shadda: bool) -> str:
 
 if __name__ == "__main__":
 
-    config_path = "./configs/segment_wikinews.yaml"
+    config_path = "./configs/segment.yaml"
     with open(config_path, 'r', encoding="utf-8") as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
 
+    if len(sys.argv) >= 2:
+        DOMAIN = sys.argv[1]
+        print(f"> Domain: {DOMAIN}")
+        
     dataagg = DataAggregator(config)
 
     mapping = dataagg.load_mapping(DOMAIN)
-    original_lines = load_file_clean(config["paths"]["base"], DOMAIN, strip=True)
 
-    lines = read_file(os.path.join(config["paths"]["base"], f"WikiNews.f{DOMAIN}.2-20.fpred.mod"))
-    
-    seg_lines = read_file(os.path.join(config["paths"]["base"], f"WikiNews.f{DOMAIN}.2-20.ffilter.txt"))
+    grnd_path = f"/Users/bkhmsi/Desktop/WikiNews/WikiNews.{DOMAIN}.grnd"
+    original_lines = load_file_clean(grnd_path, strip=True)
+
+    dirpath = config["paths"]["combine"].format(DOMAIN)
+    lines = read_file(os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.mod"))
+    seg_lines = read_file(os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.txt"))
     
     y_gen_diac, y_gen_tanween, y_gen_shadda = dataagg.separate(lines)
     
@@ -217,5 +223,14 @@ if __name__ == "__main__":
                 diacritized_line += shakkel_char(char_mv_diac, char_mv_tanween, char_mv_shadda)
         
         diacritized_lines += [diacritized_line.strip()]
-    write_file(os.path.join(config["paths"]["base"], f"WikiNews.{DOMAIN}.2-20.pred.combined"), diacritized_lines)
+    combined_pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.combined")
+    write_file(combined_pred_path, diacritized_lines)
+
+    command = f"python diac_eval.py -ofp {grnd_path} -tfp {combined_pred_path}"
+
+    print()
+    print(command)
+    print()
+
+    os.system(command)
 
