@@ -1,0 +1,11 @@
+easc:
+    id: easc.test.v1
+    metrics: [average_rouge1,average_rougeL]
+    description: Evaluate Arabic text summarization
+# Define the eval
+easc.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.summarization:Summarization
+  args:
+    samples_jsonl: easc/samples.jsonl
+    num_few_shot: 0 # max few shots to use

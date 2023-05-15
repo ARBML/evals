@@ -1,9 +1,10 @@
-# Define a base eval
-paraphrasing:
-  id: paraphrasing.dev.v1
-  metrics: ["accuracy"]
-  description: Evaluate on paraphrasing
-paraphrasing.dev.v1:
+apb:
+    id: apb.test.v1
+    metrics: [accuracy]
+    description: Evaluate Arabic paraphrasing
+# Define the eval
+apb.test.v1:
+  # Specify the class name as a dotted path to the module and class
   class: evals.elsuite.translate:Translate
   args:
     samples_jsonl: apb/samples.jsonl

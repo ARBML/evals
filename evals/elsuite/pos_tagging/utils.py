@@ -25,6 +25,9 @@ def match_tag_sequences(predicted_tags, true_tags):
 
 
 def pos_tagging_accuracy(predicted_tags, true_tags):
+    # replace extra spaces. ChatGPT sometimes add spaces around its prediction tokens.
+    predicted_tags = predicted_tags.replace(" ", "")
+    true_tags = true_tags.replace(" ", "")
     # Convert the predicted and true tags to lists
     predicted_tags = predicted_tags.strip().split("\n")
     true_tags = true_tags.strip().split("\n")
@@ -71,9 +74,12 @@ def pos_tagging_accuracy(predicted_tags, true_tags):
         #     print('Match Sequence:')
         #     print(match_sequence)
         #     raise e
-        
+
         predicted_tags_tokens = predicted_tags[matched_index].split(":")
-        if len(predicted_tags_tokens) == 2: # usually, at the end of the sentence, chatGPT forget to tag the PUNCTUATIONs. 
+
+        if (
+            len(predicted_tags_tokens) == 2
+        ):  # usually, at the end of the sentence, chatGPT forget to tag the PUNCTUATIONs.
             predicted_tag = predicted_tags_tokens[1].strip()
             true_tag = true_tags[matched_index].split(":")[1].strip()
             if predicted_tag.upper() == true_tag.upper():
