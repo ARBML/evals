@@ -1,0 +1,12 @@
+padt:
+    id: padt.test.v1
+    metrics: [accuracy]
+    description: Evaluate Arabic POS tagging
+# Define the eval
+padt.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.pos_tagging:POSTagger
+  args:
+    samples_jsonl: padt/samples.jsonl
+    few_shot_jsonl: padt/few_shot.jsonl # path to few shots file
+    num_few_shot: 0 # max few shots to use

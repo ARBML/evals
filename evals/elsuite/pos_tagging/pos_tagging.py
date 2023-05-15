@@ -1,17 +1,18 @@
 import random
-import textwrap
 from typing import Any
 
 import evals
 import evals.metrics
 from evals.prompt.base import is_chat_prompt
 
-class Classification(evals.Eval):
+from .utils import pos_tagging_accuracy
+
+class POSTagger(evals.Eval):
     def __init__(
         self,
         samples_jsonl: str,
         *args,
-        max_tokens: int = 500,
+        max_tokens: int = 1400,
         num_few_shot: int = 0,
         few_shot_jsonl: str = None,
         **kwargs,
@@ -35,9 +36,19 @@ class Classification(evals.Eval):
         if self.num_few_shot > 0:
             assert is_chat_prompt(sample["input"]), "few shot requires chat prompt"
             prompt = sample["input"][:-1]
-            for s in self.few_shot[: self.num_few_shot]:
+
+            random_fewshots = random.sample(
+                self.few_shot,
+                self.num_few_shot
+                if self.num_few_shot < len(self.few_shot)
+                else len(self.few_shot),
+            )
+
+            for s in random_fewshots:
                 prompt += s["sample"]
+
             prompt += sample["input"][-1:]
+            # print(prompt)
 
         assert isinstance(
             expected, str
@@ -50,17 +61,16 @@ class Classification(evals.Eval):
         )
 
         if expected is not None:
-            accuracy= expected.lower() in sampled.lower()
+            accuracy = pos_tagging_accuracy(predicted_tags=sampled, true_tags=expected)
 
             evals.record.default_recorder().record_event(
-                type="classification",
+                type="tagging",
                 data=dict(
                     accuracy=accuracy,
                     sampled=sampled,
                     expected=expected,
                 ),
             )
-            
 
     def run(self, recorder):
         """
@@ -68,7 +78,7 @@ class Classification(evals.Eval):
         """
         samples = evals.get_jsonl(self.samples_jsonl)
         self.eval_all_samples(recorder, samples)
-        events = recorder.get_events("classification")
+        events = recorder.get_events("tagging")
 
         accuracy = list(map(lambda e: e.data["accuracy"], events))
 

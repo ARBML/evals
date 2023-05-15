@@ -3,6 +3,7 @@ This file provides common interfaces and utilities used by eval creators to
 sample from models and process the results.
 """
 
+import tiktoken
 import logging
 from typing import Callable, Optional, Union
 
@@ -22,6 +23,53 @@ from evals.utils.api_utils import (
 
 logger = logging.getLogger(__name__)
 
+
+#https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
+def get_max_tokens(
+    prompt: Union[OpenAICreatePrompt, OpenAICreateChatPrompt, Prompt],
+    model_spec: ModelSpec
+) -> int:
+    """
+    Get the best max_tokens param
+
+    ARGS
+    ====
+    `model_spec`: `ModelSpec` containing model details to use in the query.
+        This should be the dict returned by `registry.get_model()`.
+        If `model_spec` is not provided, we use the default model that was
+            intialized at the beginning of the run.
+    `prompt`: Either a `Prompt` object or a raw prompt that will get wrapped in
+        the approriate `Prompt` class.
+    RETURNS
+    =======
+    returns the max tokens to be passed to openai.ChatCompletion.create
+    """
+    model_name =  model_spec.name
+    encoding = tiktoken.encoding_for_model(model_name)
+    if model_name == "gpt-3.5-turbo":
+        print("Warning: gpt-3.5-turbo may change. Returning num tokens for gpt-3.5-turbo-0301.")
+        model_name ="gpt-3.5-turbo-0301"
+    elif model_name == "gpt-4":
+        print("Warning: gpt-4 may change. Returning num tokens for gpt-4-0314.")
+        model_name = "gpt-4-0314"
+
+    if model_name == "gpt-3.5-turbo-0301":
+        tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
+        tokens_per_name = -1  # if there's a name, the role is omitted
+    elif model_name == "gpt-4-0314":
+        tokens_per_message = 3
+        tokens_per_name = 1
+    else:
+        raise NotImplementedError(f"""get_max_tokens() is not implemented for model {model_name}""")
+    num_tokens = 0
+    for message in prompt:
+        num_tokens += tokens_per_message
+        for key, value in message.items():
+            num_tokens += len(encoding.encode(value))
+            if key == "name":
+                num_tokens += tokens_per_name
+    num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
+    return max(model_spec.n_ctx - num_tokens, 0)
 
 def completion_query(
     model_spec: ModelSpec,
@@ -211,6 +259,10 @@ def sample_freeform(
     Otherwise, returns the sampled text, or a list of sampled texts if
         `n_samples` is not None.
     """
+    if max_tokens > 0:
+        updated_max_tokens = get_max_tokens(prompt,model_spec)
+        # print(f"{max_tokens} changed to {updated_max_tokens}")
+        max_tokens = updated_max_tokens
     response, actual_prompt, metadata = completion_query(
         prompt=prompt,
         temperature=temperature,
