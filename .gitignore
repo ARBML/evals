@@ -11,3 +11,4 @@ evals/datasets/splits_ldc/test.txt
 evals/datasets/splits_ldc/dev.txt
 evals/registry/data/bolt
 evals/eval_results/bolt.jsonl
+evals/registry/data/bolt/samples.jsonl
