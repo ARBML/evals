@@ -12,3 +12,5 @@ evals/datasets/splits_ldc/dev.txt
 evals/registry/data/bolt
 evals/eval_results/bolt.jsonl
 evals/registry/data/bolt/samples.jsonl
+evals/datasets/UNv1.0.testsets.tar.gz
+evals/datasets/testsets/
