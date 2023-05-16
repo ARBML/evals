@@ -2,3 +2,13 @@ __pycache__/
 evals.egg-info/
 .vscode/
 openapi.key
+evals/datasets/bolt_sms_chat_ara_src_transliteration
+evals/datasets/splits_ldc/dev/
+evals/datasets/splits_ldc/train/
+evals/datasets/splits_ldc/test/
+evals/datasets/splits_ldc/train.txt
+evals/datasets/splits_ldc/test.txt
+evals/datasets/splits_ldc/dev.txt
+evals/registry/data/bolt
+evals/eval_results/bolt.jsonl
+evals/registry/data/bolt/samples.jsonl
