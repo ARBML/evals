@@ -67,9 +67,11 @@ class Translate(evals.Eval):
 
         sampled = list(map(lambda e: e.data["sampled"], events))
         expected = list(map(lambda e: e.data["expected"], events))
-        sacrebleu_score = BLEU().corpus_score(sampled, [expected]).score
-
+        sentences_bleu_scores = list(map(lambda e: e.data["sacrebleu_sentence_score"], events))
+        sacrebleu_score = BLEU(effective_order = False).corpus_score(sampled, [expected]).score
+        sacrebleu_score_eo = sum(sentences_bleu_scores)/len(sentences_bleu_scores)
         return {
             "accuracy": evals.metrics.get_accuracy(events),
             "sacrebleu_score": sacrebleu_score,
+            "sacrebleu_score_eo":sacrebleu_score_eo
         }

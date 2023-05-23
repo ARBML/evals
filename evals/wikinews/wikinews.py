@@ -7,9 +7,9 @@ from pyarabic.araby import strip_tashkeel
 from torch.utils.data import Dataset, DataLoader
 
 MODEL_NAME = "gpt-3.5-turbo"
-TEMPERATURE = 0
+TEMPERATURE = 0.7
 MAX_TOKENS = 1024
-DOMAIN = "health"
+DOMAIN = "sports"
 
 def read_file(path):
     with open(path, 'r', encoding="utf-8") as fin:
@@ -81,9 +81,9 @@ if __name__ == "__main__":
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     dirpath = "/Users/bkhmsi/Desktop/WikiNews"
-    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.pred")
+    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.pred")
     grnd_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.grnd")
-    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.usage.json")
+    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.usage.json")
 
     dataset = WikiNews(dirpath)
     diac_dataset = WikiNews(dirpath, diac=True)
@@ -95,10 +95,15 @@ if __name__ == "__main__":
     dataset.set_instruction(instruction)
 
     max_gens = len(dataset)
+
+    completions, usage = [], []
+    if os.path.exists(pred_path):
+        completions = read_file(pred_path)
+        usage = read_json(usage_path)
     
-    completions = []
-    usage = []
-    for index in tqdm(range(18, max_gens)):
+    assert len(completions) == len(usage)
+    start_idx = len(completions)
+    for index in tqdm(range(start_idx, max_gens)):
 
         response = openai.ChatCompletion.create(
             model=MODEL_NAME,
@@ -114,7 +119,8 @@ if __name__ == "__main__":
         usage += [response["usage"]]
         write_json(usage_path, usage)
 
-    write_file(grnd_path, diac_dataset.getdata(max_n=max_gens))
+    if not os.path.exists(grnd_path):
+        write_file(grnd_path, diac_dataset.getdata(max_n=max_gens))
     command = f"python diac_eval.py -ofp {grnd_path} -tfp {pred_path}"
 
     print()

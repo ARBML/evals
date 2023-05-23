@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import time
 import openai
@@ -9,9 +10,9 @@ from pyarabic.araby import strip_tashkeel
 from torch.utils.data import Dataset, DataLoader
 
 MODEL_NAME = "gpt-3.5-turbo"
-TEMPERATURE = 0
+TEMPERATURE = 0.7
 MAX_TOKENS = 256
-DOMAIN = "sports"
+DOMAIN = "art"
 
 MAX_ATTEMPTS = 10
 
@@ -81,9 +82,13 @@ if __name__ == "__main__":
     openai.organization = "org-6VIsbC1WgU4rx2bWplxNV7gP"
     openai.api_key = API_KEY
 
-    dirpath = "/Users/bkhmsi/Desktop/WikiNews/segments"
-    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.usage.json")
-    preds_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.pred")
+    if len(sys.argv) >= 2:
+        DOMAIN = sys.argv[1]
+        print(f"> Domain: {DOMAIN}")
+        
+    dirpath = f"/Users/bkhmsi/Desktop/WikiNews/{DOMAIN}-overlap"
+    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20.usage.json")
+    preds_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20.pred")
 
     dataset = WikiNews(dirpath, domain=DOMAIN)
 
@@ -93,22 +98,32 @@ if __name__ == "__main__":
 
     max_gens = len(dataset)
     
-    completions = []
-    usage = []
+    completions, usage = [], []
+    if os.path.exists(preds_path):
+        completions = read_file(preds_path)
+        usage = read_json(usage_path)
+    
+    assert len(completions) == len(usage)
+    start_idx = len(completions)
     
     url = "https://api.openai.com/v1/chat/completions"
     headers = {'Content-type': 'application/json', 'Accept': 'application/json', 'Authorization': f'Bearer {API_KEY}'}
 
-    for index in tqdm(range(45, max_gens)):
+    for index in tqdm(range(start_idx, max_gens)):
 
         payload = {"messages": [dataset[index]], "max_tokens": MAX_TOKENS, "temperature": TEMPERATURE, "model": MODEL_NAME}
         response = retry_request(url, payload, headers)
 
-        diac_text = response["choices"][0]["message"]["content"]
-        completions += [diac_text]
-        write_file(preds_path, completions)
+        if "choices" in response:
+            diac_text = response["choices"][0]["message"]["content"]
+            completions += [diac_text.strip()]
+            usage += [response["usage"]]
+        else:
+            print("> Error!")
+            completions += ["Error"]
+            usage += [{"Error": 0}]
 
-        usage += [response["usage"]]
+        write_file(preds_path, completions)
         write_json(usage_path, usage)
     
 # batch = [dict(zip(batch,t)) for t in zip(*batch.values())]

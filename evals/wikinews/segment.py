@@ -55,8 +55,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Sentence Breaker')
     parser.add_argument('-c', '--config',  type=str,
                         default="configs/segment.yaml", help='Run Configs')
+    parser.add_argument('-d', '--domain',  type=str,
+                        default="sports", help='Domain')
     args = parser.parse_args()
 
+    domain = args.domain
     with open(args.config, 'r', encoding="utf-8") as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
 
@@ -68,14 +71,19 @@ if __name__ == "__main__":
     export_map = config["segment"]["export-map"]
 
     for fpath in tqdm(config["segment"]["files"]):
+        fpath = fpath.format(domain)
         FILE_PATH = os.path.join(BASE_PATH, fpath)
-        SAVE_PATH = os.path.join(BASE_PATH, fpath[:-4] + f"{stride}-{window}.filter.txt")
-        MAP_PATH  = os.path.join(BASE_PATH, fpath[:-4] + f"{stride}-{window}.filter.map")
+        SAVE_PATH = os.path.join(BASE_PATH, f"{domain}-overlap", fpath[:-4] + f"{stride}-{window}.txt")
+        MAP_PATH  = os.path.join(BASE_PATH, f"{domain}-overlap", fpath[:-4] + f"{stride}-{window}.map")
 
         with open(FILE_PATH, 'r', encoding="utf-8") as fin:
             lines = fin.readlines()
 
         segments, mapping = segment(lines, stride, window, min_window)
+
+        dirpath = os.path.dirname(SAVE_PATH)
+        if not os.path.isdir(dirpath):
+            os.mkdir(dirpath)
 
         with open(SAVE_PATH, 'w', encoding="utf-8") as fout:
             fout.write('\n'.join(segments))

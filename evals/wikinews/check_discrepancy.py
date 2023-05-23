@@ -1,20 +1,24 @@
 import os
+import sys
 import numpy as np
 import pickle as pkl
 from pyarabic.araby import strip_tashkeel, tokenize
 from wikinews import read_file, read_json, write_file
 from diac_eval import clear_line, CONSTANTS_PATH
 
-DOMAIN = "sports"
+DOMAIN = "art"
 
 if __name__ == "__main__":
 
-    dirpath = "/Users/bkhmsi/Desktop/WikiNews/segments"
-    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.pred")
-    grnd_path = os.path.join(dirpath, f"WikiNews.f{DOMAIN}.2-20.filter.txt")
-    pmod_path = os.path.join(dirpath, f"WikiNews.f{DOMAIN}.2-20.pred.mod")
+    if len(sys.argv) >= 2:
+        DOMAIN = sys.argv[1]
+        print(f"> Domain: {DOMAIN}")
+        
+    dirpath = f"/Users/bkhmsi/Desktop/WikiNews/{DOMAIN}-overlap"
 
-    max_n = 3
+    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.clean")
+    grnd_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.txt")
+    pmod_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.mod")
 
     preds = read_file(pred_path)
     grndt = read_file(grnd_path)
@@ -43,10 +47,3 @@ if __name__ == "__main__":
         new_preds += [' '.join(mod_tokens)]
 
     write_file(pmod_path, new_preds)
-    
-
-
-
-                                
-
-        
