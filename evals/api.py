@@ -44,6 +44,7 @@ def get_max_tokens(
     =======
     returns the max tokens to be passed to openai.ChatCompletion.create
     """
+    model_max_tokens = -1
     model_name =  model_spec.name
     encoding = tiktoken.encoding_for_model(model_name)
     if model_name == "gpt-3.5-turbo":
@@ -56,9 +57,11 @@ def get_max_tokens(
     if model_name == "gpt-3.5-turbo-0301":
         tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
         tokens_per_name = -1  # if there's a name, the role is omitted
+        model_max_tokens = 4096
     elif model_name == "gpt-4-0314":
         tokens_per_message = 3
         tokens_per_name = 1
+        model_max_tokens = 4096*2
     else:
         raise NotImplementedError(f"""get_max_tokens() is not implemented for model {model_name}""")
     num_tokens = 0
@@ -69,7 +72,7 @@ def get_max_tokens(
             if key == "name":
                 num_tokens += tokens_per_name
     num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
-    return max(model_spec.n_ctx - num_tokens, 0)
+    return max(model_max_tokens - num_tokens - 1, 0)
 
 def completion_query(
     model_spec: ModelSpec,

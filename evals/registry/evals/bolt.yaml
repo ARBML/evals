@@ -1,0 +1,11 @@
+bolt:
+    id: bolt.test.v1
+    metrics: [accuracy]
+    description: Evaluate Arabic transliteration
+# Define the eval
+bolt.test.v1:
+  # Specify the class name as a dotted path to the module and class
+  class: evals.elsuite.translate:Translate
+  args:
+    samples_jsonl: bolt/samples.jsonl
+    num_few_shot: 0 # max few shots to use

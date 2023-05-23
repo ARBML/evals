@@ -1,7 +1,8 @@
 run-title: wikinews-sports
 
 paths:
-  base: /Users/bkhmsi/Desktop/WikiNews/segments
+  base: /Users/bkhmsi/Desktop/WikiNews
+  combine: /Users/bkhmsi/Desktop/WikiNews/{}-overlap
   constants: /Users/bkhmsi/Projects/evals/evals/datasets/ar-constants
 
 segment:
@@ -10,7 +11,7 @@ segment:
   min-window: 2
   export-map: true
   files:
-    - WikiNews.fsports.grnd
+    - WikiNews.{}.grnd
 
 predictor:
   batch-size: 75
