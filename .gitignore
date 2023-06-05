@@ -14,3 +14,5 @@ evals/eval_results/bolt.jsonl
 evals/registry/data/bolt/samples.jsonl
 evals/datasets/UNv1.0.testsets.tar.gz
 evals/datasets/testsets/
+data/
+.DS_Store
