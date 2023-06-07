@@ -7,7 +7,7 @@ from evals.prompt.base import is_chat_prompt
 
 from .utils import pos_tagging_accuracy
 
-class POSTagger(evals.Eval):
+class Pos_Tagging(evals.Eval):
     def __init__(
         self,
         samples_jsonl: str,
