@@ -1,1 +1,1 @@
-from .pos_tagging import POSTagger
+from .pos_tagging import Pos_Tagging
