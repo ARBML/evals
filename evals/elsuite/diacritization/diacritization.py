@@ -5,7 +5,7 @@ from typing import Any
 import evals
 import evals.metrics
 from evals.prompt.base import is_chat_prompt
-from evals.elsuite.diacratization.utils import calculate_diacritization_score
+from evals.elsuite.diacritization.utils import calculate_diacritization_score
 
 
 class Diacritization(evals.Eval):
