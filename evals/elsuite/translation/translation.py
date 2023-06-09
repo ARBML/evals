@@ -7,7 +7,7 @@ import evals.metrics
 from evals.prompt.base import is_chat_prompt
 
 
-class Translate(evals.Eval):
+class Translation(evals.Eval):
     def __init__(
         self,
         model_specs: evals.ModelSpecs,
