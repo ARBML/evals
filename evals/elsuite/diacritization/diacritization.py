@@ -8,7 +8,7 @@ from evals.prompt.base import is_chat_prompt
 from evals.elsuite.diacratization.utils import calculate_diacritization_score
 
 
-class Diacratization(evals.Eval):
+class Diacritization(evals.Eval):
     def __init__(
         self,
         samples_jsonl: str,
