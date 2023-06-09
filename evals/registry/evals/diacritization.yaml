@@ -1,17 +1,17 @@
 # Define a base eval
-diacratization:
+diacritization:
   # id specifies the eval that this eval is an alias for
-  # in this case, diacratization is an alias for arithmetic.dev.match-v1
-  # When you run `oaieval davinci diacratization`, you are actually running `oaieval davinci diacritization.dev.v1`
-  id: diacratization.dev.v1
+  # in this case, diacritization is an alias for arithmetic.dev.match-v1
+  # When you run `oaieval davinci diacritization`, you are actually running `oaieval davinci diacritization.dev.v1`
+  id: diacritization.dev.v1
   # The metrics that this eval records
   # The first metric will be considered to be the primary metric
   metrics: [average_ders,average_wers]
-  description: Evaluate Arabic text diacratization
+  description: Evaluate Arabic text diacritization
 # Define the eval
-diacratization.dev.v1:
+diacritization.dev.v1:
   # Specify the class name as a dotted path to the module and class
-  class: evals.elsuite.diacratization:Diacratization
+  class: evals.elsuite.diacritization:Diacritization
   # Specify the arguments as a dictionary of JSONL URIs
   # These arguments can be anything that you want to pass to the class constructor
   args:
