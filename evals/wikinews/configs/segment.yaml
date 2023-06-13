@@ -1,9 +1,9 @@
 run-title: wikinews-sports
 
 paths:
-  base: /Users/bkhmsi/Desktop/WikiNews
-  combine: /Users/bkhmsi/Desktop/WikiNews/{}-overlap
-  constants: /Users/bkhmsi/Projects/evals/evals/datasets/ar-constants
+  base: ./data
+  combine: ./data/{}-overlap
+  constants: /Users/bkhmsi/Projects/GPT-Eval/evals/datasets/ar-constants
 
 segment:
   stride: 2

@@ -13,7 +13,7 @@ DOMAIN = "sports"
 
 def read_file(path):
     with open(path, 'r', encoding="utf-8") as fin:
-        data = fin.readlines()
+        data = [line.strip() for line in fin.readlines()]
     return data 
 
 def read_json(path):

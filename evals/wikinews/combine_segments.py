@@ -185,12 +185,13 @@ if __name__ == "__main__":
 
     mapping = dataagg.load_mapping(DOMAIN)
 
-    grnd_path = f"/Users/bkhmsi/Desktop/WikiNews/WikiNews.{DOMAIN}.grnd"
+    grnd_path = f"./data/WikiNews.{DOMAIN}.grnd"
     original_lines = load_file_clean(grnd_path, strip=True)
 
-    dirpath = config["paths"]["combine"].format(DOMAIN)
-    lines = read_file(os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.mod"))
-    seg_lines = read_file(os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.txt"))
+    dirpath_ = config["paths"]["combine"].format(DOMAIN)
+    dirpath = "./data/GPT-4"
+    lines = read_file(os.path.join(dirpath, f"{DOMAIN}_temp=0.7.2-20.pred.mod"))
+    seg_lines = read_file(os.path.join(dirpath_, f"WikiNews.{DOMAIN}.2-20.txt"))
     
     y_gen_diac, y_gen_tanween, y_gen_shadda = dataagg.separate(lines)
     

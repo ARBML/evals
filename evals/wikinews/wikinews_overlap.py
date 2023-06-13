@@ -10,6 +10,7 @@ from pyarabic.araby import strip_tashkeel
 from torch.utils.data import Dataset, DataLoader
 
 MODEL_NAME = "gpt-3.5-turbo"
+MODEL_NAME = "gpt-4-0314"
 TEMPERATURE = 0.7
 MAX_TOKENS = 256
 DOMAIN = "art"
@@ -78,18 +79,19 @@ class WikiNews(Dataset):
 
 if __name__ == "__main__":
 
-    API_KEY = os.getenv("OPENAI_API_KEY")
-    openai.organization = "org-6VIsbC1WgU4rx2bWplxNV7gP"
+    API_KEY = os.getenv("OPENAI_API_GPT4")
+    openai.organization = "org-YDVLZUQaNWf6UEhpr9txK66z"
     openai.api_key = API_KEY
 
     if len(sys.argv) >= 2:
         DOMAIN = sys.argv[1]
         print(f"> Domain: {DOMAIN}")
-        
-    dirpath = f"/Users/bkhmsi/Desktop/WikiNews/{DOMAIN}-overlap"
-    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20.usage.json")
-    preds_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20.pred")
+    
+    dirpath = "./data/GPT-4"
+    usage_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20_2.usage.json")
+    preds_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp={TEMPERATURE}.2-20_2.pred")
 
+    dirpath = f"./data/{DOMAIN}-overlap"
     dataset = WikiNews(dirpath, domain=DOMAIN)
 
     instruction = "Please diacritize the following Arabic sentence"
@@ -97,6 +99,7 @@ if __name__ == "__main__":
     dataset.stats()
 
     max_gens = len(dataset)
+    max_gens = 20
     
     completions, usage = [], []
     if os.path.exists(preds_path):
@@ -120,6 +123,8 @@ if __name__ == "__main__":
             usage += [response["usage"]]
         else:
             print("> Error!")
+            print(response)
+            breakpoint()
             completions += ["Error"]
             usage += [{"Error": 0}]
 

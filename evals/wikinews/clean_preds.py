@@ -11,10 +11,11 @@ if __name__ == "__main__":
         DOMAIN = sys.argv[1]
         print(f"> Domain: {DOMAIN}")
         
-    dirpath = f"/Users/bkhmsi/Desktop/WikiNews/{DOMAIN}-overlap"
-    grnd_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.txt")
-    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred")
-    pred_clean_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.clean")
+    dirpath = f"./data/{DOMAIN}-overlap"
+    dirpath = "./data/GPT-4"
+    grnd_path = os.path.join("data", f"{DOMAIN}-overlap", f"WikiNews.{DOMAIN}.2-20.txt")
+    pred_path = os.path.join(dirpath, f"{DOMAIN}_temp=0.7.2-20.pred")
+    pred_clean_path = os.path.join(dirpath, f"{DOMAIN}_temp=0.7.2-20.pred.clean")
 
     preds = read_file(pred_path)
     grndt = read_file(grnd_path)
@@ -31,7 +32,7 @@ if __name__ == "__main__":
             grnd_tokens = tokenize(grndt[index-1].strip(), morphs=strip_tashkeel)
             diff = abs(len(grnd_tokens)-len(pred_tokens))
             is_error = pred.strip() == "Error"
-            if diff > 2 and not is_error:
+            if diff > 5 and not is_error:
                 print(f"{index}\t{diff}")
             index += 1
     

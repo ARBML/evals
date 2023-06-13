@@ -15,10 +15,14 @@ if __name__ == "__main__":
         print(f"> Domain: {DOMAIN}")
         
     dirpath = f"/Users/bkhmsi/Desktop/WikiNews/{DOMAIN}-overlap"
+    dirpath = "./data/GPT-4"
 
-    pred_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.clean")
+    pred_path = os.path.join(dirpath, f"{DOMAIN}_temp=0.7.2-20.pred.clean")
+
     grnd_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}.2-20.txt")
-    pmod_path = os.path.join(dirpath, f"WikiNews.{DOMAIN}_temp=0.7.2-20.pred.mod")
+    grnd_path = os.path.join("data", f"{DOMAIN}-overlap", f"WikiNews.{DOMAIN}.2-20.txt")
+
+    pmod_path = os.path.join(dirpath, f"{DOMAIN}_temp=0.7.2-20.pred.mod")
 
     preds = read_file(pred_path)
     grndt = read_file(grnd_path)

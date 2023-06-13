@@ -270,3 +270,6 @@ if __name__ == '__main__':
                          ARABIC_LETTERS_LIST, CLASSES_LIST, args.style, no_diacritic=False),
            calculate_ser(args.original_file_path, args.target_file_path, ARABIC_LETTERS_LIST, CLASSES_LIST, args.style, case_ending=False, no_diacritic=False)))
     print('+---------------------------------------------------------------------------------------------+')
+
+
+# python diac_eval.py -ofp data/WikiNewsTruth.combined.txt -tfp data/WikiNewsPred_GPT4.combined.txt
