@@ -1,3 +1,360 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f80cdfeda98bb074ca7dcae0de1d76b7b7648a586e62d84c35b0d8462e97482b
-size 81901
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"فما  اجمل  هذا  الدين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباحكم ضحكه قلب  يملاه الرضي  اضحك  ياحبيب  الملايين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اعصمنا عن  معصيهك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بجد  ربنا يبارك  في  كلماتك بتوصل  والله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"غبي  الله  يزيد  غباك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"قصه جميله مهمه جدا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صح  يا  اخي صدقت  الله  يعين  الجميع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ثقيلين  دم  كثير"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كانت  تسوي  مقلب  انها محترمه بعدين  اعترفت  انها"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"قرف  يعيع"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الموضوع  ما  اله  علاقه بالتخلف  بس  لما  تكون  الاضرار  اكثر  من  الفاءده  بلا  منه ا  ?  هم  من  هيك  انه المفاعل  بحاجه لتبريد  داءم  لالاسف  وين  المي  يلي  عننا ?  ?  ?  ?"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بس  اللي  قاهرني  اللي  ما  ينطقون  حرف  الراء  التغ  من  جدهم جايين  يبون  يغنون"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  اجمل  الاخاء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ارزقنا  واياك الجنه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"طول  عمرك تخاف  من  الحب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لكن  هذا  البرنامج  السخيف  الرخيص  واضح  التمثيل  فيه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  اشوفه انه عادي  ولا  فيه اي  معني  وايش  مليوني  مشاهد  والله  انه ما  يستحق  الي  هذا  الحد  من  المشاهده  وبعدين  هاض  شي  مقزز"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  سليم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"للي  مفكرين  المفاعل  راح  يطورهم المفاعل  راح  يدمر  الاردن  المنطقه  اللي  حولها لان  الفساد  الموجود  بالاردن  مش  موجود  بدوله اخري  هذا  يعني  ان  الفاسدين  رايحين  يسمسروا  يلهفوا  لما  يوصلوا  اشكل  مفاعل  لالاردن  ناسين  ان  المفاعل  يحتاج  الي  بحر  ماء  لالتبريد  نحن  لانملك ماء  لالشرب  ناسين  ان  التطور  يكون  بمشاركه الجميع  ليس  بقرار  فردي  ناسين  ان  الذي  اقر  المفاعل  هو  المحتكر  الاول  هيءه الطاقه  ان  شاغرها بقي  معلق  اثناء  فتره تسلم  طوقان  وزاره  التربيه  والتعليم  لدول  المتقدمه  بدات  تبحث  عن  بداءل  لالمفاعلات  نحن  بنشتري  الخربان  منهم مشان  التقدم  بلدنا بفضل  الله  لديها طاقه الرياح  طاقه الشمس  لماذا  لا  يتم  استغلالها بدل  المفاعل  النووي  طالما  اكلنا معظمه فاسد  غير  صالح  بسبب  الجشع  الطمع  الفساد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الاماني  المحققه  باذن  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يلعنك نذل  وكلب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  حقيقي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صراحه الاراده  القناعه  هيا  الغني  الاكتفاء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يعني  الواحد  بغلط  غلطه بالجامعه  بدون  ما  ياثر  عحدا  غير  حاله بروحوا  بمنعوه  يدخل  كل  جامعات  الاردن"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مين  بشار  العاهه  هاد  الي  بهدد  اي  عند  الجد  والله  لالنساء  والبنات  تتطلعن  قبل  الرجال  في  هالحاله  ونلعن  ابو  الساعه  اللي  طلعت  بشار  وغيره شو  هالحكي  الاردن  قوي  بجيشه وقاءده  فعلا  هززلت  قال  سوريا  قال  ولا  النعامه  او  رقبه  عاليه  بدهها قص"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انهم يمكن  يكونو  قاهرينك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  هديله  بالشوز  زي  الصعيدي  الي  يكرمه الي  ضربه بالشبشب  ناقصه حراميه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وش  هالتحف  والله  مساكين  ماكلين  مقلب  بقوه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"املا  رءتيك بعبق  السماء  مع  ولاده  صباح  جديد  تهتز  له الحياه  تحتفل  ايقظ  عقلك بالنور  ابعث  همهك حيه متوثبه لتطوي  نهارك في  فرح"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اقترح  تحويلهم الي  طبيب  نفسي ليس  الي  القضاء"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  ايه  الجمال  ده  سبحانك ربي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يشافيك  يعافيك من  كل  داء  وهامه اخي سيد  الوكيل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"داءما  تبعث  النشاط  الحيويه  في  النفوس  مع  كل  صباح  اسعد  الله  صباحك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صح  علشان  كده منكذبش  ونرتاح"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"عاهاتك يا  وطني"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اني اسالك اخلاص  النيه  كرم  الطويه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"سبحان  الله  قادر  علي  كل  شيء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ليش  يعني  اخترت  انه مصيره في  فتح  يا  تافه  وفي  المءتمر  السادس  كمان  يا  ابن  الكلب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذا  واحد  واطي ميمثل  غير  نفسه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  عوضنا خير  منما اخذ  مننا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هدا  ماهو  عقل  هدا  تخلوف"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ارزقنا  ان  نكون  مثلهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يجب  علي  كل  مسلم  الاعتزاز  بدينه في  جميع  الامور  صغيرها كبيرها"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اخر  واحد  اش  فيه مجنون  المفرووض  اللجنه  تمنع  المجانين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  حد  بيتحكم  فيي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  ظلموه  لجنه الطراطير"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شكلك احول  موب  حوله"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"نفسي افهم  من  وين  جاي  يا  ابن  الكلب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  لا  يرفعه من  مكانه اللي  برفع  الاسعار"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"المال  الاسود  جريمه  بحق  الوطن  والمستقبل"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الدرب  للجنه وبلبل  شادي  بفنه وريحه الياس  والحنه  اقولها لكل  احبابي اللهم  اجعلنا  منمن يتمتعون  بروح  وريحان  وجنه النعيم  من  الرحمن"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ما  اصبح  بي من  نعمه او  باحد  من  خلقك فمنك وحدك لا  شريك  فلك  الحمد  لك الشكر"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صحيح  انك سافل"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"معلومه ممتازه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  اعيني علي  دكرك  وشكرك وحسن  عبادهك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ممكن  يكون  احسن  بالاخلاص"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اي  تقدم  اي  ازدهار  مفاعل  النوويه  بعمل  الامراض  كثير  اهم  السرطان  الله  يبعده عنها انا  معهم رفض  المفاعل  النوويه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  خيرا  من  الدنيا  وماء  فيها و  ما  عليها السلام  عليكم ورحمه الله  تعالي  وبركاته اخواني واخواتي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  ثقف  نفسك ده  بيقول  كلام  زي  الفل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربي يهديهن"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباحكم هلا  و  شوق  و  غلا  ,  ,  صباحكم نور  و  فرح  و  سرور  ,  ,  صباحكم ذوق  و  قدركم فوق  ,  ;  صباحكم حب  وسعاده"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ملعوب  عليهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مهزله  التاريخ"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لالا  بس  اغلبهم داريين  بس  يقولها استعباط  ورفع  ضعط  خذها مني"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"خراي  علي  احسن  علوي  ومحب  لهاجحش  خربت  سوريه  ياكلب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مشتاقه لك شوق  ماحسه  الناس  شوق  يغطي  معاليق  الروح  بضمي ترف  دلع  لهفه مشاعر  واحساس  مابي غيرك ولاغيرك تراه همي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اهدنا  صراطك المستقيم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"من  جد  سوبر  ابقار"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"دلوعه  حيوانه ?"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذا  تشهير  ملعون  والدين  المفروض  ما  يعرضونه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كل  النسخ  العربيه  والاجنبه  كله تمثيل  في  تمثيل  مسخره وعقول  تاقهه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحمدلله  علي  كل  حال  ,  الفرصه  قاءمه ,  والقادم  اجمل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"متي  يجي  عام  2050  عشان  ادخل  رجلي  مع  الشاشه  واحطها بفمك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحمدلله  من  كل  ضيق  اسجد  لالله  احس  ان  في  اعله مستوا  وانسا  واتذلل  الي  الله  ليحميني من  فتن  الدنيا  واحسن  منزلي في  الجنه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ايه  الهبل  دا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لو  يبطلو  سرقه  بهالخزينه  الله  الشعب  ليعيش  لكو  ارحمونا  حرام  عليكم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"قرفت  انتحر  عن  الدرج"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اذا  مرتك بتعمل  هيك  يا  ادمن  لا  تفكر  كل  الرجال  مثلك تفي  عليك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"حلواه اوي  الحمله  دي  وربنا يارب  يكرمك وكل  الي  بيتبرعو"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  رب  اريد  تجديد  ايماني ساعدني"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"خبار  الموت  تهز  قلوبنا بعمق  وسياتي  اليوم  الذي  تهتز  فيه قلوب  من  حولنا لموتنا ,  يارب  نسالك حسن  الختام  ورضاك عننا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"سلطان  القرف"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اكيد  الله  لا  يحرمنا من  هالنعمه  العظيمه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذا  هو  المهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  انصر  الاسلام  واعز  المسلمين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  لالله  انا  اليه راجعون  الله  يستر  هالبلد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اما  في  الدين  فتصير  اخوه في  الله  وهي  ارقي  العلاقات  الانسانيه  بصحيح  الحديث  رب  اخ  لم  تلده امك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  اقدر  الاخلاص  الوفاء  بشكل  كبير"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كنت  اخادع  الحياه  لكي  اعيش  كما  اريد  لكن  الحياه  خدعتني عشت  كما  هي  تريد"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هيك  بدهم الخونه  اتباع  ايران  الاخوان  المفسدون"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ساعد  نفسك بنفسك حتي  تجد  الطريق  المناسب  الذي  تريده ,  اكتشف  قدراتك واستغل  مواهبك ولا  تترك  نفسك لحيث  تاخذك الرياح  فينتهي  العمر  قبل  ان  تحقق  حلمك !"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"خير  الكلام  ما  قل  دل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"النظافه  من  الايمان"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يصبحك برضاه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اضحك  امام  كل  الناس  لتسرهم تجبر  خواطرهم فتبسمك في  وجوههم صدقه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اهلا  بيك  في  دين  الله  ربنا يثبتك ويزيدك ايمانا  انا  فرحانه  بيك  كتير"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"المسلم  الفطن  النقي  يتصرف  بما  يرضي  الله  في  السر  العلن  نسال  الله  عز  وجل  ان  نتبع  كل  ما  يرضيه عننا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ولك تفييه  عليك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  ريت  لو  يعملوا  دورات  قبل  الزواج"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  الله  كلامك بلسم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انت  ما  تستحي  تقارن  القران  بوحده ساقطه انعل  ابوك لا  ابو  الملحد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اجعلنا  منهم وارزقنا  الطاقه  ولاراده  لزللك ياربي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كان  نفسي اكون  شخص  بارد  ,  يتقبل  اي  حاجه من  غير  ما  يتاثر  ."}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  تحشيش  من  الاخر"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ولكن  كيف  ان  المفاعل  النووي  غير  مضر  بالبيءه  فهمني ?  ?"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مش  من  بني  ادم  انتي  من  جنس  الحيوانات"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تبا  لكم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  اثقل  دمك ما  اغبيك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كانت  الحياه  صعبه والمدرسين  خشنين  واغلبهم من  الاردن  وفلسطين  لكنهم علموانا الادب  والعلم  غفر  الله  لامواتهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  رب  ان  امسيت  بحزن  فاصبحني بفرح  ,  و  ان  نمت  علي  ضيق  فايقظني علي  فرج  و  ان  كنت  بحاجه فلا  تكلني الالا لسويك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"حلو  كلامك عزيزي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"قصه جميله ودايما  انا  بحب  اسمع  البرنامج"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحمد  لالله  اكسجين  يعيد  لالصدر  انفاسه ف  تجدها الصوت  السعيد  الصوت  المتءاكل  من  البكاء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وين  بدهم يروحو  يعني  خالصه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هلا  كففت  عن  قسوهك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"\" \"\"  الجنه  تحت  اقدام  الامهات  ,  اللهم  اجعل  امهاتنا من  نساء  الجنه  \"\"\""}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  بقي  للسحيجه  اشي  يسترزقوا  منه ,  فضاءح  شركه الولاء  وموارد  والفوسفات  والفساد  عادت  الي  الواجهه  ."}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مش  عارف  كيف  اهلهم سمحولهم  يقدمو  في  البرنامج  هادول  شغل  بطون"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  ياعزيزتي  انا  عايشه  بالمحكمه  واشوف  تسلط  وظلم  كبير  من  اشباه  الرجال  بس  بالنهايه  المظلومه  تجد  من  ينتصر  لها وبكل  هدوء  بدون  افلام"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هاض  بني  ادم  حقير"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صحح  الخبر  مش  تحرير  المشتقات  النفطيه  انماما توليعها"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربنا  يشفيهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"حقيقي  لازم  نجمد  قلبنا عن  اي  حاجه غلط"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كانهم خرفان  العيد  عند  المسلخ"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الخير  والفل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"قصه حقيقيه راءعه فيها عبره لكل  زوج  وزوجه فيها الموده  والرحمه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  ناخذ  القرار  الصح"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والحاجه  الي  انت  بتحبها  دي  هي  مش  اكتر  من  حاجه زينها الشيطان  واقنعك بحلاوهها بس  هتندم  بعدين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مجانين  احد  يضحك  عليك وانتم  قدامه وتكمل"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صدقت  يا  رب  اجعلنا  راضين  بقدرك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  عندهم هو  قله احترام  لالمشتركين  وفله ادب  تجاه  المشاهدين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  داشره  وغير  متزوجه  ولدي  علاقات  مشبوه  واحشش  واحيانا  اهرب  مخدرات  و  اجيد  التسليك  احب  ان  انكب  نفسي وعلاقتي  بالمنزل  متوتره جد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"العنصريه  في  الاردن  لا  تتوقف  علي  كلمه اردني  وفلسطيني  وانماما تتجاوزت  ذلك  الي  تصنيف  ابناء  الوطن  الواحد  وفقا  لالعشيره  وهذا  اسوء  حال  وصلنا  له"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كان  خطيي الوحيد  ,  اعطيت  من  لا  يستحق  اكثر  من  حقه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اسمعنا  خير  هذا  اليوم  و  ما  بعده و  افتح  لنا ابواب  رزقك و  رحمهك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"سلمت  امري ربي  عالمين  رغم  البعد  احس  ان  ربنا رح  يكتب  ويجمعنا ويكون  نصيبي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انتو  كلاب  ازي تسو  المصحف  بي كلابه زي  ده"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"استودعكم الله  الذي  لا  تضيع  وداءعه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"و  اذا  فادنا بشي  رح  يكون  في  خساره  كبيره بالاخر"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احس  انه يفطر  حشيش"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مهو  اصلا  زي  مشروع  الباص  السريع  يلي  استملكو  عشانه  شارع  المحطه  كامل  ليسه بنسمع  عنو  ما  شفنا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  سلام  علي  الوفاء  اللي  اتفقد  في  عصرنا ويا  حسرتاه علي  الحب  الذي  بات  مجرد  كلمات"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  جي  في  وقته"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  طيبه الخير  جينا  يا  طيبه بالروح  افتدينا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كرهت  كلمه نازح  ,  لاجء  ,  ازمه ,  وضع  ,  توره ,  تاريخ  ,  جغرافيا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"فاجعل  اللهم  عوضي  فيه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رعب  وخوف  علي  وجهك ياجبان"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كن  انت  التغير  الذي  تريد  ان  تراه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تايم  لاين  اردني  واعي  ومثقف  لفت  انتباه  زين  الاردن  لتغيير  محتوي  تغريدتها  شكرا  لاحترامكم الراي  العام  في  الاردن"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اعنا  ترك  كل  ما  لا  ترضي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"برنامج  فاشل  جدا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ناس  تبي  تتمصخر  ماتدري  شلون"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مش  في  محلوا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رح  اجتهد  باني اكون  حلوه يوم  عرسي  مش  اكون  مثل  القرده"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  جميل  الكرامه  افضل  ابقي  لالانسان"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هات  ناس  تفهم  والمثل  بحكي اسال  مجرب  ولا  تسال  خبيير"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لازم  يحكم  عليهم بالسجن"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربنا  يعنا  علي  كل  شيء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  علي  الكلام  يا  رب  اعينا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لهم صارو  يبيعو  يشترو  في  البلد  متل  ما  بدهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يفضح  امكم فضحتونا  شو  هالسخافه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لازم  كل  واحد  فينا يفكر  بشكل  ايجابي  يبعد  عنه السلبيات"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ليت  بعض  الذكريات  ينعمل  لها فورمات"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الورد  والفل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ثبتنا  وثبهه علي  دينك الحنيف  وسنه نبيك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اهم  شي  الواسطه  والمظهر  الخارجي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ولا  انا  صورهي كذا  اجي  اهبال  هوو"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الي  استحو  ماتو"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اخ  يا  بطني عورني من  الضحكك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يسعدك يبعد  عنك كل  شر"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذول  مخانيث"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"نتفق  معك في  ان  الرجال  يعرفون  بالحق  ولا  يعرف  الحق  بالرجال"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بوركت  جهودك و  سلمت  اناملك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ان  الله  لا  يضيع  اجر  المحسنين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  حول  ولا  قوه  الا  بالله  اذا  اخذ  ما  اوهب  اسقط  ما  اوجب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  وفقنا لما  تحب  ترضي  يا  رب"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  عفوك رضاك الجنه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"\" \"\"  لا  تحاول  لفت  انتباه  احد  ,  ان  لم  تكن  ملفت  بالفطره  ستبدو  احمقا  بالتظاهر  \"\"\""}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شو  عادي  يزم  انتا  ما  عندك دم  ونخوه يزم  انتا  مش  بني  ادم  تري  ورح  طير"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  انك عفو  تحب  العفو  فاعف  عننا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مسوي  انه مندهش"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  لالله  ارحم  احبهي و  شافيهم  وعافيهم واعف  عنهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هم  اللي  مصخرو  انفسهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اجتماع  حواء  اكيد  في  خرفنه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ارزقني  حبك حب  من  احبك حب  عمل  يقربني لحبك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ينور  عليك ويكثر  من  امثالك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"طول  عمر  بخاف  ان  امثالك يصبحوا  مطربين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  بقلو  بيضه حكي فارط  نحن  الاردنيه  ما  حد  بيطلع  معنا براس"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"نحن  في  زمن  يهان  فيه المرء  ويكرم  فيه الكلب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الغرب  فسق  وعاءلات  مفككه والنساء  عاهرات  ,  المدارس  تعلم  الجنس  لالاطفال  يشربون  الكحول  وياكلون  لحم  الخنزير  ثم  يقول  :  وجدت  في  الغرب  اسلام  بلا  مسلمين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ارزقني  كما  ترزق  البغاث"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ممرضه هايجه  تمارس  الجنس  مع  المريض"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شكلو  عمرو  ماشاف  كاميرا  تصورو"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"المهم  الدعاء  في  السجود  حتي  تغسل  عينيك الدموع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تري  هاي  فاهمه  موضوع  الوطنيه  غلط  تري  مش  لحالك اردنيه  والله  اعلم  اذا  انك اردنيه  اصلا  شغل  سوالف  حصيده"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اذا  اردت  ان  يفتح  الله  عليك فالزم  هذا  الدعاء  البسيط  اللهم  اجعل  ا  لا  خره همي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"زمان  المطربيين  اللي  غنو  لهم المعاتيه  دول  ولعو  في  مقابرهم وبيعيطو  بدل  الدموع  دم  علي  تراثهم اللي  راح"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وبعدين  تري  مالقت  دعم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحل  الوحيد  هو  القرب  من  الله  وذكره الالا بذكر  الله  تطمءن  القلوب  قال  الله  تعالي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"عيش  زي  ما  بدك ما  ترد  علي  حدا  ابدا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  فعلا  قررت  واخدت  القرار  ده  وحاسه  براحه وسعاده  كبيره اوي  بقربي  من  ربنا بجد  الحمد  لالله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تضحك  كانها مفجوعه من  شيء"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كارثه بشريه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شكرا  لك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اني اسالك صبرا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اغفر  لنا انا  كنا  ظالمين  ادخلنا الجنه  سالمين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مشان  الله  حد  يعمله هوشه  بدنا  نعطللنا  شوي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يكثر  الافراح"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احتمال  ما  يشارك  الليو  البايخ"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  احفظ  احبابي اصدقاءي من  الحسد  الكيد  الفتنه  العين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الملح  احسن  علاج  لالتهاب  الحلق  ومفعوله اسرع  من  الادويه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تحيه محبه وسلام"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شو  الي  جنني و  نزلت  ماده اثار  الاردن"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  مش  عارفه شو  بدنا  نسوي  نشحد  مثلا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وهاد  اللي  بخبص  حكي ملوش  معنا ابن  مين  هاد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احقر  من  هيك  خيانه  ما  في"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بعن  الله  ابوك انت  وعدوله يالسامج"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مهزله  ياعيب  الشووم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كيف  صرت  كاتب  يا  زلمه ?  ?  انت  كثير  عليك حمار"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الزنبق  والفل  والياسمين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  اله  الا  الله  محمد  رسول  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رضيت  بالله  ربا  وبالاسلام  دينا  وبمحمد  صلي  الله  عليه وسلم  نبيا  ورسولا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  انجنيت"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وهابي  تاج  راسك يا  اللي  تاكل  من  وريك اذا  في  الوهابيه  شء  مخالف  لكتاب  الله  سنه نبيه  اذكره لا  تكون  كالببغاء  تردد  خلف  الناعقين  لتثبت  انك علي  الصراط  انت  في  هوه  الخراب  طنت  من  طنوت  سوريا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هكذا  المسلمون"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"برنامج  قديم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباحك نور"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"التنفس  العميق  يوفر  علاج  طبيعي  لالصداع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احلي  صباح  من  احلي  شيخ  في  العالم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربي  ارزقني  حلو  الحياه  و  جمال  الحظ  و  سعه  الرزق  و  راحه البال"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شبابنا فيهم الخير  بس  بدهم حدا  يرشدهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  بذل  نفسي مره اثنين  خمسين  عشان  الغرام  الحلال  احلي  لكن  مين  يحس  يفهم  يقدر"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شو  يعني  بدك ايانا نحكي  من  وراكي  مش  حلواه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"علي  الاقل  هناك  رجل  وفي  لامراه  احبها وهذا  يسعدني"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اربد  فيها جامعات  اكثر  من  عمان  .  .  .  وفيها قد  عمان  ونص  لعيبه المنتخب  منها .  .  .  و  80  %  من  مطربين  الاردن  منها"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  احنا نتبع  نظام  مختلط  بين  الراسماليه  والاشتراكيه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اذا  استعنت  بالله  وتوكلت  عليه ونيهك كانت  صادقه سوف  يقف  الله  بجوارك ولن  يخزلك ابدا  ?  احبك ربي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  مو  حقودين  ولا  شي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربنا  يقدرني ويعفو  عني"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ثبتنا بالقول  الثابت  في  الحياه  الدنيا  وفي  الاخره"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"منيك  ولك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"طبعا  واقع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"شو  الاشي  الي  بيضحك  ما  ازنخك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اقل  من  عادي  هذا  مستويك اقلب  وجهك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صح  لسانك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"نحن  بنتهاوش  مع  الكتب"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"من  ترك  شيءا  لالله  عوضه الله  نورا  وايمانا  في  قلبه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  @@ملءه@@ه الحب  العرفان"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"حميك الله  من  النكد"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  ما  اعنا  علي  التغير"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  كرامه في  الحب  والغرام"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"و  ما  من  دابه في  الارض  لا  طاءر  يطير  بجناحيه الا  علي  الله  رزقه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  الرساله  دي  جاتلي  في  وقتها قولت  اكيد  ربنا بعتهالي  الحمد  لالله  وخات  القرار"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"البرنامج  فاشل  جدا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  شاء  الله  العطله  ماثر  عليكوا  كتير  صبايا  الكل  بحكي حبيبتي  وحبي  وبلمدرسه  كل  واحد  بكشر  من  جهه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللي  لفت  انتباهي الدبه  اللي  جنبها"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بسعد  ربك وصباحك عسل  انت  وكل  من  قال  انا  اردني  وبحب  القياده  الهاشميه  وتراب  الاردن  وسنح  الاخوان  ولاد  كلب  علي  هالصبح"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وجه  الفطيره  قبل  تعيب  الناس  انظر  الي  حالك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الخشوع  هو  المرحله  التاليه  لالتركيز  والتركيز  ياتي  باطاله  القراءه  والتدبر  واطاله  الركوع  والسجود"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"طبعا  محدش  يقدر  بس  سبحان  الله  فيه ناس  عايشين  من  غير  مياه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صبح  يحكي  لالتلفزيون  الاردني  العقار  في  الاردن  رخيص  !  وجميل  .  .  .  رخيص  يعني  بنقدر  نملك  شقه ب  10000"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباحكم نقاء  يشبه  سيرهك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  علي  الظالمين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"افلام  الرعب  تاثر  علي  اطفالنا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحريه  غاليه لن  تجدها عند  متسول  اخواني ساذج  لايملك  منطق  ولافكر"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  يقدرنا علي  ادخال  المياه  النظيفه  لكل  بيت  محتاجه المياه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يعطيك الصحه  العافيه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ان  شاء  الله  هنكمل  مشوار  النجاح"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  معنا علي  طاعهك ورضاك وقوي  عذامءنا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اسال  من  بيده ملكوت  السماوات  والارض  ان  ييسر  لكم اموركم ويرفع  قدركم ويعلي  شانكم ويبارك  لكم فيما  اعطيكم ويصرف  عنكم ما  اذيكم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بدعي علي  طول  بان  الله  يرزقني الخشوع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  ارزق  العزيمه  لاتخاذ  القرار  ويا  رب  اخلفنا  خيرا  منه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الحب  من  الله  علينا جميعا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الهمه  النشاط  شيخنا الفاضل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كله راءع  بجد  ربنا يكرمك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يستر  علي  بنات  المسلمين  جميعا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"روعه الاشياء  تبقي  رواءحها بقي  اصحابها ام  انصرفوا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"خري عليك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ناقص  و  كذاب  وما  في  مصداقيه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اخرس  صحيح  ما  تفهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ان  شاء  الله  يتقبل  الله  صلاهنا يزيد  في  صلاتنا الخشوع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اكثر  من  امثالك يا  دكتور  عمروالله  نفسنا تشرفنا  في  مسجد  الصديق  بشرتون  هليوبوليس"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"واضح  جدا  ان  اغلب  الناس  هاي  عندها مشاكل  نفسيه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباح  الوفاء  لك يا  صديقي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وجعتو  راسي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يضحكون  م  شاففوا  انفسهم لو  قلنا  غنوا  جابوا  الععيد  فالحين  بس  في  الظرافهه  الشيبان"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  تفهمي غلط  حبيبتيي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذا  هو  الدين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وسبب  برفعه ضغطك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  زينا بالخلق  الحسن  ارزقنا  الامانه  نظافه القلب  اللسان  امين"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اصلح  حال  المسلمين  اجعلهم من  الرباتين  حتي  نحرج  منما نحن  فيه انه ان  خلصت  النوايا  صلحت  الاعمال"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربنا  يكتر  من  امثالك يا  مصطفي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلامك يشعرني بالتفاءل  يمدني بالقوه  الاستمرار"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ا  لا  سلام  ليس  فيه رهبانيه  انماما هو  دين  علم  وعمل  وبحث  وتطوير  .  .  .  وعندماما طبقنا هذا  المبدا  سدنا العالم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربي  يكون  بالعون  ياخي  فقد  احزنني كلامك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"محظوظه هي  تلك  الفتاه  التي  سانقل  ملابسي من  غساله امي الي  غسالهها"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هاض  بعرفو  بس  مقرف"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللي  غني  عدوله محاوله استخفاف  دم  من  البرنامج"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"تاثير  الغرب  مبين  علي  العرب  المجانين"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يشم  الطيب  ويتعطر  يا  دكتور"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحمدلله  زادت  ثقافهي لكثير  من  الاشياء  وتنوعت  المفاهيم  لدي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مش  شايف  العالم  مش  ملاقيه الخبز  كل  واحد  بشتغل  علي  سياره  رح  يوكل  هوا  بارتفاع  المحروقات  الاكل  الشرب  رح  يرتفع"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انه دين  يسر  وليس  بدين  عسر"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صحيح  كل  هالشغله  بس  قرار  وبظن  كلنا قادرين  ناخده  اذا  استعنا  وتوكلنا الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ولا  مستحيل  يطلع  واحد  يفشل  نفسه كذا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"وياريت  بتظبط  الكذب  ماوش  رجلي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  من  يرزق  النعاب  في  عشه هيء  لنا مقادير"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  ارحم  الراحمين  يا  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  اجعلنا  منمن ياخذون  بالاسباب"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  قررات  من  دلواتي  يا  مصطفي  بس  انا  عاز  رايك في  حاجات  كتير"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحب  الان  بقي  تيك  اواي  قليل  اوي  لما  نلقي  انسان  مخلص  في  حبه مع  ان  الحب  ده  اجمل  واسما  عاطفه في  الوجود"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ظني بالله  جميل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  اجمل  ديننا الاسلامي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ربنايقويك  اتشجعي  وخوذي قرار  وخلي  الصحبه  الصلحه  جنبيك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  سليم  الف  بالميه الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بصمات  راقياه لاديب  الدعوه  محمد  الغزالي"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"والله  الواحد  بيدعي  كثيرا  ان  ربنا يجعلنا في  طريق  مستقيم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احسنوا  الظن  وثقوا  بما  عند  الله  وتوكلوا  عليه لا  تفسد  عقلك بالتشاءم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كلام  راءع  وفي  وقته وربنا قادر  علي  كل  شء"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحلو  انكم بتحكوا  علي  اساس  انو  الاردن  ما  فيه فساد  سرقات"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  فعلا  مءمن  بالفكره  دي  جدا  وبحاول  انفذها"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"سماجه سماجه ووالله  البنانيين  دمهم ثقيل  مره"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"سوبر  سطار  ولا  بلاش"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  لا  تجعل  لحب  الدنيا  سلطانا  علي  قلبي بل  اجعل  حبك في  قلبي سلطانا"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"بس  اكيد  وريها مصلحه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رجعتولنا  الفرحه  اللي  نسيناها"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"هذا  اللي  فالحين  فيه العرب  فقط  الهبل  التخلف"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"طيب  الله  انفاسك وياسلام  لو  الشباب  او  الشابات  اذا  احبو  يحبون  كجب  شاه  جاهان  وممتاز  محل"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يجب  علي  المسلم  ان  يواسي  اخوه في  الاسلام"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رغم  اني اول  من  اثار  فضيحه  في  المناهج  المقرره  في  الاردن  طوال  عقود  مضت  ,  و  عوقبت  بالفصل  عده مرات  من  التربيه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"رب  كريم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لا  والله  ماهم  اللي  مسخره انا  اللي  مسخره اللي  تفرجت  عليهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احسنت  وصفت  ما  يدور  او  يجول  في  راس  كل  شاب  ملتزم  كل  فتيانه عفيفه نقيه تقيه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اللهم  انزع  من  قلوبنا مالا  يرضيك"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  بتحبو  حد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مش  فاهم  عليك انك صاير  غير  مفهوم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مع  مين  بتحكي  بتول  انشالله  مع  حالك"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"انا  ضد  النووي  كالاردن  البحث  عن  مصادر  لالطاقه  النظيفه  خصوصا  اننا نفتقر  لالماء  و  الاجدي  بنا ايضا  ان  نبحث  عن  سبل  لحل  مشكله المياه  بالمبالغ  التي  ستصرف  علي  المفاعلات  النوويه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  اروع  برنامج  الطريق  الي  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"النقاش  العقلاني  ينتهي  يانك تقنع  الشخص  يا  انك تقتنع  اذا  ما  انتهي  النقاش  كذا  واللي  قدامك مصدي  الحل  الثالث  تتفل  بوجهه و  بكذا  يكون  انتهي  النقاش"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"ما  اجمل  الحياه  برضي  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"حرام  السخريه  من  الناس"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اشداء  علي  الكفار  رحماء  بينهم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الحكومه  قاعده بتخبص  رايحين  يدمروا  البلد  الله  ينتقم  منهم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"كدا  عيب  اودني راحت  فيها"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"احب  الله  تعالي  و  رسوله الكريم"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"فتحه نصره نوره بركهه هديه"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مبرد  وجوهكم"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يا  اخوان  نحن  قرفنا"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  يجعل  ابوك وامك من  اهل  النار  اذا  بتعيد  هالحركه  مره ثانيه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الفاتحه  علي  ارواح  الغلابه"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الله  ينتقم  منهم اجمعين  اللي  في  بالي"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"مطلوب  نصيحه منك لكي  نستحضر  الخشوع"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"صباحكم سعاده  وعباده مقبوله ان  شاء  الله"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لاتحزن  فان  الحسنه  بعشره امثالها الي  سبعماءه  ضعف  الي  اضعاف  كثيره و  السيءه  بمثلها الا  ان  يعفو  ربك يتجاوز  فكم  لالله  من  كرم  ما  سمع  مثله و  من  جود  لا  يقاربه جود"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"الي  اعتصام  مفتوح  ميدان  تحرير  لالتخلص  من  قوي  الفساد  الافساد"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"لتصل  الي  القمه  لا  تلتفت  الي  مغريات  الطريق"}],"ideal":"Positive"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"اذا  كان  حالك احسن  من  حالو  دوس  لايك  وقول  سبحان  الله"}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"نظام  اقتصاد  الاردن  فقط  لا  يتبع  اي  نظام  اقتصادي  موضوع  ,  لا  اشتراكي  ولا  راسمالي  ولا  اسلامي  ولا  مختلط  ."}],"ideal":"Negative"}
+{"input":[{"role":"system","content":"Respond only positive or negative sentiment in English: "},{"role":"user","content":"يارب  اعنا  علي  ترك  المعاصي  ماحيينا"}],"ideal":"Positive"}
